@@ -5,7 +5,7 @@ use Queulat\Forms\Node_Factory;
 use Queulat\Forms\Element\Input_Url;
 use Queulat\Forms\Element\WP_Editor;
 use Queulat\Forms\Element\Input_Text;
-
+use Queulat\Forms\Element\Select;
 
 class Event_Metabox extends Metabox
 {
@@ -26,9 +26,39 @@ class Event_Metabox extends Metabox
         }
         return true;
     }
+    public function get_site_courses() {
+        $courses = new WP_Query( array(
+            'post_type' => 'cc_course',
+            'post_status' => 'publish',
+            'posts_per_page' => -1
+        ) );
+        $return_array = array( '' => 'Select a Course');
+        if ( $courses->have_posts() ) {
+            foreach ($courses->posts as $course) {
+              $return_array[$course->ID] = get_the_title( $course->ID );
+            }
+        } else {
+            return false;
+        }
+        return $return_array;
+    }
     public function get_fields(): array
     {
         return [
+            Node_Factory::make(
+                Select::class,
+                [
+                    'name' => 'related_course',
+                    'label' => 'Related courses',
+                    'attributes' => [
+                        'class' => 'widefat'
+                    ],
+                    'properties' => [
+                        'description' => 'If this event is related to a course please select'
+                    ],
+                    'options' => $this->get_site_courses()
+                ]
+            ),
             Node_Factory::make(
                 Input_Text::class,
                 [
@@ -133,5 +163,5 @@ class Event_Metabox extends Metabox
     }
 }
 
-new Event_Metabox('event', 'Event related data', 'ccgnevents', ['context' => 'normal']);
+new Event_Metabox('event', 'Event related data', 'cc_events', ['context' => 'normal']);
 
