@@ -19,6 +19,7 @@ require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-scholarships-cpt-plug
 
 /* Include local files */
 require STYLESHEETPATH. '/inc/certificates-functions.php';
+require STYLESHEETPATH. '/inc/widgets.php';
 /**
  * Theme singleton class
  * ---------------------
