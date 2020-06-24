@@ -16,6 +16,7 @@ define( 'THEME_PARENT_URI', get_template_directory_uri() );
 require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-course-cpt-plugin/cc-course-cpt-plugin.php';
 require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-events-cpt-plugin/cc-events-cpt-plugin.php';
 require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-scholarships-cpt-plugin/cc-scholarships-cpt-plugin.php';
+require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-testimonials-cpt-plugin/cc-testimonials-cpt-plugin.php';
 
 /* Include local files */
 require STYLESHEETPATH. '/inc/certificates-functions.php';
