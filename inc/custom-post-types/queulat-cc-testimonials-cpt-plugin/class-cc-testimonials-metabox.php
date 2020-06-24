@@ -61,4 +61,3 @@ class Testimonial_Metabox extends Metabox {
 }
 
 new Testimonial_Metabox('testimonial', 'Testimonial related data', 'cc_testimonials', ['context' => 'normal']);
-
