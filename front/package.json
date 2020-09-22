@@ -3,18 +3,21 @@
   "version": "2020.6.1",
   "description": "This is a child theme created for the Certificates website",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "serialize-javascript": "^5.0.1",
+    "yargs-parser": "^20.2.0"
+  },
   "devDependencies": {
-    "@creativecommons/vocabulary": "^1.0.0-beta.14",
+    "@creativecommons/vocabulary": "^1.0.0-beta.16",
     "bulma": "^0.8.2",
-    "copy-webpack-plugin": "^5.1.1",
-    "css-loader": "^3.5.2",
+    "copy-webpack-plugin": "^5.1.2",
+    "css-loader": "^3.6.0",
     "mini-css-extract-plugin": "^0.9.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^4.14.1",
     "sass-loader": "^8.0.2",
-    "style-loader": "^1.1.4",
-    "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
     "build": "webpack --mode production",
