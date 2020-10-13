@@ -1,3 +1,5 @@
+@import "bulma/sass/utilities/_all.sass";
+
 .choose-license {
   padding: $space-big;
   color: $color-black;
@@ -65,6 +67,41 @@
           }
         }
       }
+    }
+  }
+}
+
+// Stats module/block/widget
+.wp-theme-certificates .stats-block {
+  align-items: stretch;
+
+  .column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    flex-grow: 1;
+  }
+
+  @include touch {
+    & {
+      flex-direction: column;
+    }
+
+    .column {
+      display: block;
+    }
+
+    .title {
+      font-size: 16px;
+    }
+
+    .stat,
+    .caption {
+      display: inline;
+      font-family: $family-heading;
+      font-size: $font-size-h3 !important;
     }
   }
 }
