@@ -55,14 +55,14 @@ class CC_Certificates_Site {
 	 * Setup theme actions, both in the front and back end
 	 * */
 	public function actions_manager() {
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_styles' ), 90 );
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 	public function enqueue_scripts() {
 		//Nothing yet
 	}
 	public function enqueue_styles() {
-		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/styles.css', self::theme_ver );
+		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/styles.css', array('cc_base_style'), self::theme_ver );
 	}
 }
 
