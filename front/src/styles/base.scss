@@ -14,3 +14,18 @@ a,
 a:hover {
   color: $color-forest-green;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  a {
+    color: inherit;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

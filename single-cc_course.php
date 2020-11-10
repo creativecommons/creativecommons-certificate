@@ -20,7 +20,7 @@
 						<?php the_content(); ?>
 					</div>
 					<div class="entry-meta">
-						<?php 
+						<?php
 							$course_duration = get_post_meta( get_the_ID(), 'course_duration', true );
 							$course_language = get_post_meta( get_the_ID(), 'course_language', true );
 							$course_url = get_post_meta( get_the_ID(), 'course_apply_url', true );
@@ -47,7 +47,7 @@
 							}
 						 ?>
 					</div>
-          <?php 
+          <?php
             $upcoming_events = Certificates_Website::get_upcoming_course_events( get_the_ID() );
             if ( !empty( $upcoming_events ) ) {
               echo '<h4>Upcoming Courses</h4>';

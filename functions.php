@@ -59,7 +59,7 @@ class CC_Certificates_Site {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 	public function enqueue_scripts() {
-		//Nothing yet
+		wp_enqueue_script( 'cc_certificates_script', THEME_LOCAL_URI . '/assets/js/script.js', array( 'jquery' ), self::theme_ver, true );
 	}
 	public function enqueue_styles() {
 		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/styles.css', array('cc_base_style'), self::theme_ver );

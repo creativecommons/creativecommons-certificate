@@ -159,3 +159,15 @@
     height: 180px;
   }
 }
+
+// FAQ Page
+.wp-theme-certificates.page-template-template-faq {
+  .faq-sidebar {
+    position: sticky;
+    top: $space-normal;
+  }
+
+  .faq-sidebar .active {
+    font-weight: bold;
+  }
+}
