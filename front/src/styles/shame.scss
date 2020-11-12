@@ -53,3 +53,13 @@ span.icon {
     background-color: $color-light-gray;
   }
 }
+
+// Custom twitter button
+.button.twitter {
+  color: $color-white;
+  background-color: #2aa3ef;
+  border-color: currentcolor;
+  text-transform: none;
+  font-family: "Source Sans Pro";
+  font-weight: bold;
+}

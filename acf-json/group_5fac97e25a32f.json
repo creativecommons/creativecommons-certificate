@@ -1,0 +1,61 @@
+{
+    "key": "group_5fac97e25a32f",
+    "title": "Conversations in the Community",
+    "fields": [
+        {
+            "key": "field_5fac97f1d02f4",
+            "label": "Featured Tweets",
+            "name": "featured_tweets",
+            "type": "repeater",
+            "instructions": "Manually feature some #OpenGLAM Tweets from the community. Displaying 3 is strongly recommended, but you can show two or more.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "field_5fac9838d02f5",
+            "min": 2,
+            "max": 10,
+            "layout": "table",
+            "button_label": "Add Tweet",
+            "sub_fields": [
+                {
+                    "key": "field_5fac9838d02f5",
+                    "label": "Tweet URL",
+                    "name": "tweet_url",
+                    "type": "oembed",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "width": "",
+                    "height": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-home.php"
+            }
+        ]
+    ],
+    "menu_order": 3,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1605146773
+}

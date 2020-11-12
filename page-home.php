@@ -23,10 +23,10 @@
   include get_template_part('inc/partials/home', 'hero');
   ?>
 
-  <section class="home-faq has-background-grey-lighter padding-top-big padding-bottom-xl">
+  <section class="has-background-grey-lighter padding-top-big padding-bottom-xl">
     <div class="container">
 
-      <div class="columns is-variable is-8 padding-bottom-xl">
+      <div class="columns is-variable is-6 padding-bottom-xl">
         <div class="column is-two-thirds">
           <?php include get_template_part('inc/partials/home', 'faq'); ?>
         </div>
@@ -55,13 +55,43 @@
             <div class="column is-narrow">
               <?php // @todo: Don't hardcode this link ?>
               <a href="/calendar" class="title is-5 has-text-grey-dark">See Calendar</a>
-
             </div>
-
           </div>
         </div>
       </div>
 
+    </div>
+  </section>
+  <section class="padding-top-xl padding-bottom-xxl">
+    <div class="container">
+
+    <div class="padding-bottom-xl">
+        <h2>Education News From The Blog</h2>
+
+                <div class="columns is-variable is-6">
+</div>
+      </div>
+
+      <div>
+        <div class="columns margin-bottom-big">
+          <div class="column">
+            <h2>Conversations in the Community</h2>
+          </div>
+          <div class="column is-narrow">
+            <a class="button small twitter" target="_blank" rel="noreferrer nofollow" href="https://twitter.com/hashtag/OpenGLAM">See #OpenGLAM Posts</a>
+          </div>
+        </div>
+        <div class="columns is-variable is-6">
+          <?php if( have_rows('featured_tweets') ): while( have_rows('featured_tweets') ) : the_row();
+              $tweet = get_sub_field('tweet_url'); ?>
+            <div class="column">
+              <div class="embed-container">
+                <?php echo $tweet; ?>
+              </div>
+            </div>
+        <?php endwhile; endif; ?>
+        </div>
+      </div>
     </div>
   </section>
 </main>
