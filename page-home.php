@@ -65,11 +65,11 @@
   <section class="padding-top-xl padding-bottom-xxl">
     <div class="container">
 
-    <div class="padding-bottom-xl">
+      <div class="padding-bottom-xl">
         <h2>Education News From The Blog</h2>
 
-                <div class="columns is-variable is-6">
-</div>
+        <div class="columns is-variable is-6">
+        </div>
       </div>
 
       <div>
@@ -78,7 +78,7 @@
             <h2>Conversations in the Community</h2>
           </div>
           <div class="column is-narrow">
-            <a class="button small twitter" target="_blank" rel="noreferrer nofollow" href="https://twitter.com/hashtag/OpenGLAM">See #OpenGLAM Posts</a>
+            <a class="button small twitter margin-right-big" target="_blank" rel="noreferrer nofollow" href="https://twitter.com/hashtag/OpenGLAM">See #OpenGLAM Posts</a>
           </div>
         </div>
         <div class="columns is-variable is-6">
