@@ -41,7 +41,7 @@
             <p class="margin-top-big"><?php echo $description; ?></p>
             <?php if ($featured_course) : ?>
               <a
-                class="has-text-success is-block has-text-weight-bold text-lg margin-top-big"
+                class="has-text-success is-block has-text-weight-bold body-big margin-top-big"
                 href="<?php echo $featured_course; ?>">
                 See course
               </a>

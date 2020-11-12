@@ -35,8 +35,7 @@
 			<div class="column is-3">
 				<aside class="sidebar faq-sidebar">
           <?php
-              if( have_rows('faq_group') ):
-                 while( have_rows('faq_group') ) : the_row();
+              if( have_rows('faq_group') ): while( have_rows('faq_group') ) : the_row();
 
               $faqs_title = get_sub_field('title'); ?>
             <section class="margin-bottom-bigger">
@@ -61,34 +60,31 @@
 			</div>
 			<div class="column is-8">
 				<section class="entry-page-content faqs">
-          <?php the_content(); ?>
 					<div>
             <?php
-              if( have_rows('faq_group') ):
-                 while( have_rows('faq_group') ) : the_row();
+              if( have_rows('faq_group') ): while( have_rows('faq_group') ) : the_row();
 
               $faqs_title = get_sub_field('title'); ?>
 
               <section class="faq-group margin-bottom-xl">
-              <h2 class="margin-bottom-bigger">
-                  <?php echo $faqs_title; ?>
-              </h2>
+                <h2 class="margin-bottom-bigger">
+                    <?php echo $faqs_title; ?>
+                </h2>
 
-              <?php
-                if( have_rows('questions') ):
-                  while( have_rows('questions') ) : the_row();
-                    // Get sub value.
-                    $question = get_sub_field('question');
-                    $answer = get_sub_field('answer')
-              ?>
-
-                <h3 class="margin-bottom-big margin-top-large faq-title" id="<?php echo str_slug($question); ?>">
-                  <a href="#<?php echo str_slug($question); ?>">
-                    <?php echo $question; ?>
-                  </a>
-                </h3>
-                <?php echo $answer; ?>
-              <?php endwhile; endif; ?>
+                <?php
+                  if( have_rows('questions') ):
+                    while( have_rows('questions') ) : the_row();
+                      // Get sub value.
+                      $question = get_sub_field('question');
+                      $answer = get_sub_field('answer')
+                ?>
+                  <h3 class="margin-bottom-big margin-top-large faq-title" id="<?php echo str_slug($question); ?>">
+                    <a href="#<?php echo str_slug($question); ?>">
+                      <?php echo $question; ?>
+                    </a>
+                  </h3>
+                  <?php echo $answer; ?>
+                <?php endwhile; endif; ?>
               </section>
 
               <?php endwhile; endif; ?>

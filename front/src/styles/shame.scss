@@ -19,3 +19,37 @@
   display: grid;
   grid-template-rows: auto 1fr auto;
 }
+
+span.icon {
+  display: block;
+  width: $space-big;
+  height: $space-big;
+
+  svg {
+    fill: currentcolor;
+  }
+}
+
+// Accordion component
+// @todo: Should this be in vocabulary? Do/will we use this anywhere else?
+
+.accordion {
+  .accordion-item {
+    border-bottom: 2px solid $color-light-gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// Override HR color on grey bg
+.has-background-grey-lighter {
+  hr {
+    margin: $space-bigger 0;
+    background-color: $color-light-gray;
+  }
+}

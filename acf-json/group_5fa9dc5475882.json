@@ -18,7 +18,7 @@
             "collapsed": "field_5fa9dd284f6dc",
             "min": 0,
             "max": 0,
-            "layout": "row",
+            "layout": "block",
             "button_label": "",
             "sub_fields": [
                 {
@@ -116,8 +116,10 @@
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": "",
+    "hide_on_screen": [
+        "the_content"
+    ],
     "active": true,
     "description": "",
-    "modified": 1604968392
+    "modified": 1605139598
 }

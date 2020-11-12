@@ -1,0 +1,57 @@
+{
+    "key": "group_5faa03bf2efb8",
+    "title": "Featured FAQs",
+    "fields": [
+        {
+            "key": "field_5faa03cec9a36",
+            "label": "Featured FAQs",
+            "name": "featured_faqs",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "How many hours of work does the Certificate course require?": "How many hours of work does the Certificate course require?",
+                "What do I get with the Certificate?": "What do I get with the Certificate?",
+                "Does everyone participating in the course get a certificate?": "Does everyone participating in the course get a certificate?",
+                "What other CC Certificate tracks will you offer?": "What other CC Certificate tracks will you offer?",
+                "Do you offer discounts?": "Do you offer discounts?",
+                "Can you explain more about the Certificate course prices?": "Can you explain more about the Certificate course prices?",
+                "Who should take the Certificate course?": "Who should take the Certificate course?",
+                "Can I represent Creative Commons once I am CC Certified?": "Can I represent Creative Commons once I am CC Certified?",
+                "Who can I contact for technical support?": "Who can I contact for technical support?",
+                "Have a Question we didn't answer?": "Have a Question we didn't answer?"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "page_template",
+                "operator": "==",
+                "value": "page-home.php"
+            }
+        ]
+    ],
+    "menu_order": 2,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1604979067
+}
