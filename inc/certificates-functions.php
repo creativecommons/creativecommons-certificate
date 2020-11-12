@@ -1,9 +1,9 @@
 <?php
 class Certificates_Website {
-	public static function set_certificates_logo() {
+	public static function set_certificates_logo( ) {
 		return 'products/certificates.svg#certificates';
 	}
-	public static function set_certificates_logo_image_size() {
+	public static function set_certificates_logo_image_size( ) {
 		return '215 40';
 	}
 	// Add a class to the page body to override styles from the base theme
@@ -24,7 +24,7 @@ add_filter( 'wpseo_breadcrumb_separator', array( 'Certificates_Website', 'modify
 /**
  * Populate the 'Featured FAQs' dropdown on the homepage edit page with the actual FAQs.
  */
-function acf_load_featured_faq_choices($field) {
+function acf_load_featured_faq_choices( $field ) {
 	$field['choices'] = array();
 
 	// @todo: FAQ page id is hardcoded here, find a way to make this dynamic
@@ -39,13 +39,13 @@ function acf_load_featured_faq_choices($field) {
   return $field;
 };
 
-add_filter('acf/load_field/name=featured_faqs', 'acf_load_featured_faq_choices');
+add_filter( 'acf/load_field/name=featured_faqs', 'acf_load_featured_faq_choices' );
 
 
 function get_faqs_by_titles($titles = array(), $faqs = array()) {
 	// @todo: FAQ page id is hardcoded here, find a way to make this dynamic
 	$faq_groups = get_field('faq_group', 32);
-	$filtered_faqs = [];
+	$filtered_faqs = array();
 
 	foreach ($faq_groups as $faq_group) {
 		foreach ($faq_group['questions'] as $question) {

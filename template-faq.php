@@ -23,7 +23,7 @@
 	<header class="page-header">
 		<div class="container">
 			<div class="columns is-centered">
-				<div class="column is-11">
+				<div class="column is-12">
 					<?php get_template_part( 'inc/partials/entry/page', 'header' ); ?>
 				</div>
 			</div>
@@ -31,9 +31,9 @@
 	</header>
 
 	<div class="container">
-		<div class="columns is-centered is-variable is-5">
-			<div class="column is-3">
-				<aside class="sidebar faq-sidebar">
+		<div class="columns is-centered is-variable is-8">
+			<div class="column is-4">
+				<aside class="sidebar faq-sidebar padding-top-xl padding-bottom-xl">
           <?php
               if( have_rows('faq_group') ): while( have_rows('faq_group') ) : the_row();
 
@@ -59,7 +59,7 @@
 				</aside>
 			</div>
 			<div class="column is-8">
-				<section class="entry-page-content faqs">
+				<section class="entry-page-content padding-top-xl faqs">
 					<div>
             <?php
               if( have_rows('faq_group') ): while( have_rows('faq_group') ) : the_row();

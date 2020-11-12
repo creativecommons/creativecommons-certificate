@@ -22,5 +22,5 @@ $faqs = get_faqs_by_titles($featured_faq_titles);
       </li>
     <?php endforeach; ?>
   </ul>
-  <a href="<?php echo get_page_link(32); ?>" class="button is-success small">See All FAQs</a>
+  <a href="<?php echo get_page_link(32); ?>" class="button register small">See All FAQs</a>
 </div>

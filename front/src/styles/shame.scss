@@ -63,3 +63,15 @@ span.icon {
   font-family: "Source Sans Pro";
   font-weight: bold;
 }
+
+// Custom Register Button
+.button.register {
+  color: $color-white;
+  background-color: $color-forest-green;
+  border-color: $color-forest-green;
+}
+
+// Remove unneeded logo margin (comes from vocabulary)
+.navbar-brand {
+  margin-left: 0 !important;
+}
