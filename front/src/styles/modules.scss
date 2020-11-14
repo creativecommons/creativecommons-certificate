@@ -96,7 +96,6 @@
     }
 
     // If there's only one item in the breadcrumb, fix padding
-    span > .breadcrumb_last,
     span > span:first-child > :first-child {
       padding-left: 0;
     }
