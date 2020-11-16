@@ -3,4 +3,4 @@ if ( function_exists( 'yoast_breadcrumb' ) ) {
 	yoast_breadcrumb( '<p class="breadcrumbs" id="breadcrumbs">', '</p>' );
 }
 ?>
-<h2 class="title is-1"><?php the_title(); ?></h2>
+<h2 class="title is-1 has-text-black"><?php the_title(); ?></h2>
