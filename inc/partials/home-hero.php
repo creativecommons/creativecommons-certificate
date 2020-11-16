@@ -29,28 +29,26 @@
   <!-- Featured Courses -->
   <?php if( have_rows('featured_courses') ): ?>
     <div class="container">
-      <ul class="courses columns is-variable is-5 is-desktop">
+      <ul class="courses">
       <?php while( have_rows('featured_courses') ): the_row();
           $title = get_sub_field('title');
           $description = get_sub_field('description');
           $featured_course = get_sub_field('featured_course');
       ?>
-        <li class="column">
-          <div class="padding-bigger has-background-white body-normal">
-            <h2 class="title is-3"><?php echo $title; ?></h2>
-            <p class="margin-top-big"><?php echo $description; ?></p>
-            <?php if ($featured_course) : ?>
-              <a
-                class="has-text-success is-block has-text-weight-bold body-big margin-top-big"
-                href="<?php echo $featured_course; ?>">
-                See course
-              </a>
-            <?php endif; ?>
-          </div>
+        <li class="course padding-bigger has-background-white body-normal">
+          <h2 class="title is-3"><?php echo $title; ?></h2>
+          <p class="margin-top-big"><?php echo $description; ?></p>
+          <?php if ($featured_course) : ?>
+            <a
+              class="has-text-success is-block has-text-weight-bold body-big margin-top-big"
+              href="<?php echo $featured_course; ?>">
+              See course
+            </a>
+          <?php endif; ?>
         </li>
       <?php endwhile; ?>
       </ul>
-      <div class="additional-info padding-top-small padding-bottom-bigger body-bigger">
+      <div class="additional-info padding-top-small padding-bottom-bigger body-bigger padding-touch-horizontal">
         <?php echo $additional_info; ?>
       </div>
     </div>

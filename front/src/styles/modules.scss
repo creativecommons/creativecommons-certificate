@@ -118,31 +118,56 @@
   overflow: hidden;
 
   .content {
-    z-index: 1;
-    position: relative;
-    width: 500px;
-    max-width: 100%;
-    margin-right: auto;
-    margin-left: 0;
-    padding-top: 96px !important; // to override vocab
+    padding: 0 $space-big !important; // :-(
+    padding-top: $space-bigger !important; // :-(
 
-    @include touch() {
-      padding: $space-small;
+    @include tablet() {
+      z-index: 1;
+      position: relative;
+      width: 500px;
+      max-width: 100%;
+      margin-right: auto;
+      margin-left: 0;
+      padding: 0;
+      padding-top: 96px !important; // to override vocab
     }
   }
 
   .img-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    text-align: right;
-    z-index: 0;
-
     img {
-      width: calc(100% - 400px); // container width - content width
-      margin-right: -4rem;
-      height: auto;
+      width: 100%;
+      margin-bottom: -6rem;
+    }
+
+    @include mobile {
+      &:after {
+        content: "";
+        position: absolute;
+        top: calc(100% + 4rem);
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        background-color: whitesmoke;
+        height: 2000px;
+        z-index: 1;
+      }
+    }
+
+    @include tablet() {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: right;
+      z-index: 0;
+
+      img {
+        width: calc(100% - 400px); // container width - content width
+        margin-right: -4rem;
+        height: auto;
+      }
     }
   }
 
@@ -152,10 +177,22 @@
     z-index: 2;
   }
 
-  @include touch() {
-    .courses {
-      max-width: calc(100% - #{$space-small});
-      margin: 0 auto;
+  .courses {
+    @include mobile() {
+      .course {
+        margin-bottom: $space-normal;
+      }
+    }
+
+    @include touch() {
+      padding: 0 $space-big;
+    }
+
+    @include tablet() {
+      display: flex;
+      align-items: stretch;
+      column-gap: $space-larger;
+      margin-bottom: $space-bigger;
     }
   }
 
@@ -169,6 +206,12 @@
     width: 100%;
     background-color: $color-lighter-gray;
     height: 180px;
+  }
+}
+
+.wp-theme-certificates .after-faq {
+  @include touch() {
+    margin-top: $space-xl;
   }
 }
 

@@ -23,7 +23,7 @@
   include get_template_part('inc/partials/home', 'hero');
   ?>
 
-  <section class="has-background-grey-lighter padding-top-big padding-bottom-xl">
+  <section class="has-background-grey-lighter padding-top-big padding-bottom-xl padding-touch-horizontal">
     <div class="container">
 
       <div class="columns is-variable is-6 padding-bottom-xl">
@@ -31,7 +31,7 @@
           <?php include get_template_part('inc/partials/home', 'faq'); ?>
         </div>
         <?php // Links Section (Hardcoded for now) ?>
-        <div class="column">
+        <div class="column after-faq">
           <h5 class="margin-bottom-normal"><a href="" class="has-text-forest-green">Course Content</a></h5>
           <p>Access current course content here. Unless otherwise noted, all course content is licensed CC BY 4.0. Also available in audio and remixed for a book publication!</p>
 
@@ -62,7 +62,7 @@
 
     </div>
   </section>
-  <section class="padding-top-xl padding-bottom-xxl">
+  <section class="padding-top-xl padding-bottom-xxl padding-touch-horizontal">
     <div class="container">
 
       <div class="padding-bottom-xl">

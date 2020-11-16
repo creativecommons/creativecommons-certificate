@@ -75,3 +75,17 @@ span.icon {
 .navbar-brand {
   margin-left: 0 !important;
 }
+
+// Fix bad coluns ruining the entire layout
+main {
+  max-width: 100%;
+  display: block;
+  overflow-x: hidden;
+}
+
+.padding-touch-horizontal {
+  @include touch() {
+    padding-left: $space-big;
+    padding-right: $space-big;
+  }
+}
