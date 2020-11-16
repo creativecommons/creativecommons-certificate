@@ -1,3 +1,5 @@
+@import "bulma/sass/utilities/_all.sass";
+
 .choose-license {
   padding: $space-big;
   color: $color-black;
@@ -123,6 +125,10 @@
     margin-right: auto;
     margin-left: 0;
     padding-top: 96px !important; // to override vocab
+
+    @include touch() {
+      padding: $space-small;
+    }
   }
 
   .img-wrapper {
@@ -144,6 +150,13 @@
   .additional-info {
     position: relative;
     z-index: 2;
+  }
+
+  @include touch() {
+    .courses {
+      max-width: calc(100% - #{$space-small});
+      margin: 0 auto;
+    }
   }
 
   &:after {

@@ -29,7 +29,7 @@
   <!-- Featured Courses -->
   <?php if( have_rows('featured_courses') ): ?>
     <div class="container">
-      <ul class="courses columns is-variable is-5">
+      <ul class="courses columns is-variable is-5 is-desktop">
       <?php while( have_rows('featured_courses') ): the_row();
           $title = get_sub_field('title');
           $description = get_sub_field('description');
