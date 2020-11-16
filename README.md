@@ -20,7 +20,6 @@ Relies on the following plugins:
 | advanced-custom-fields-pro  | active-network | available | 5.9.1     |
 | queulat                     | active-network | none      | 0.1.0     |
 | the-events-calendar         | active-network | none      | 5.2.1     |
-| wp-plugin-vocabulary-blocks | active-network | none      | 2020.09.1 |
 | wordpress-seo               | active-network | available | 15.2      |
 +-----------------------------+----------------+-----------+-----------+
 ```
