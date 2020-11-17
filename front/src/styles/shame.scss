@@ -37,16 +37,27 @@ span.icon {
 
 // Accordion component
 // @todo: Should this be in vocabulary? Do/will we use this anywhere else?
-
 .accordion {
   .accordion-item {
     border-bottom: 2px solid $color-light-gray;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    .accordion-header {
+      border: none;
+      background-color: transparent;
+      appearance: none;
+      width: 100%;
+      -webkit-appearance: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     &:hover {
       cursor: pointer;
+    }
+
+    .accordion-body[hidden] {
+      visibility: hidden;
     }
   }
 }

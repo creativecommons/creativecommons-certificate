@@ -35,6 +35,10 @@ body {
   color: $color-dark-slate-gray;
 }
 
+button {
+  font-family: inherit;
+}
+
 // Responsive Font Styles
 // Reduce font sizes when on mobile screens
 // @todo: I think this should become a part of vocabulary.

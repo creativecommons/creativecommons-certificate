@@ -1,4 +1,25 @@
+function togggleBoolAttr(el, attr) {
+  return attr == "true" ? "false" : "true";
+}
+
+function togggleHiddenAttr(el, attr) {
+  if (attr === true || attr === "hidden") return false;
+  return true;
+}
+
 jQuery(document).ready(function ($) {
+  // Accordions
+  // accordionHeader.click(() => accordionBody where labelledby = accordionHeader.id remove hide)
+  $(".accordion-header").click(function (event) {
+    var $el = $(event.currentTarget);
+    var bodyId = $el.attr("aria-controls");
+    var $accBody = $('[id="' + bodyId + '"]');
+
+    // flip aria expanded
+    $el.attr("aria-expanded", togggleBoolAttr);
+    $accBody.attr("hidden", togggleHiddenAttr);
+  });
+
   // FAQ Page
   if ($(".page-template-template-faq").length > 0) {
     var lock = false;
