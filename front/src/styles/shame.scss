@@ -2,6 +2,11 @@
 // Code here should be commented with a relevant issue or explanation.
 @import "bulma/sass/utilities/_all.sass";
 
+// Pressbooks hides the WordPress Admin bar, but doesn't remove the empty space :/
+html {
+  margin-top: 0 !important;
+}
+
 // Fix navbar alignment issues with other containers
 .wp-theme-certificates .navbar {
   @include touch {
