@@ -262,6 +262,33 @@
     }
   }
 
+  // Scholarship "cards"
+  .scholarship-recipients {
+    @include desktop() {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-auto-flow: dense;
+      column-gap: $space-large;
+      row-gap: $space-larger;
+    }
+  }
+
+  .scholarship-recipient {
+    @include touch() {
+      margin-bottom: $space-larger;
+    }
+
+    figure {
+      margin: 0;
+      width: 100%;
+      margin-bottom: $space-normal;
+    }
+
+    img {
+      object-fit: cover;
+    }
+  }
+
   // Stats shortcode
   .stats {
     // Hide WordPress generated brs
@@ -270,7 +297,7 @@
     }
 
     .number {
-      font-size: 70px;
+      font-size: 70px !important;
       line-height: 1.2;
     }
 
