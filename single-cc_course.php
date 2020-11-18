@@ -3,18 +3,14 @@
 	the_post();
 ?>
 <section class="main-content">
-	<header class="single-header">
+	<header class="single-header single-header--course">
 		<div class="container">
-			<div class="columns is-centered">
-				<div class="column is-12">
-					<?php get_template_part( 'inc/partials/entry/course', 'header' ); ?>
-				</div>
-			</div>
+			<?php get_template_part( 'inc/partials/entry/course', 'header' ); ?>
 		</div>
 	</header>
 	<div class="container">
 		<div class="columns is-centered">
-		<div class="column is-4">
+		<div class="column is-4 has-background-soft-gold">
 			wow
 		</div>
 			<div class="column is-8">
