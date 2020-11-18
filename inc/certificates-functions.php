@@ -14,7 +14,7 @@ class Certificates_Website {
 		return '<i class="icon chevron-right is-6"></i>';
 	}
 	public static function get_upcoming_course_events( ) {
-		return [];
+		return ['wow'];
 	}
 	public static function register_columns_shortcode( $atts, $content ) {
 			$a = shortcode_atts( array( 'cols' => '4' ), $atts );

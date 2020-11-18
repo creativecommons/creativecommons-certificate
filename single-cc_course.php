@@ -9,35 +9,35 @@
 		</div>
 	</header>
 	<div class="container">
-		<div class="columns margin-top-0">
+		<div class="columns margin-top-0 is-desktop">
 		<div class="column is-3 has-background-soft-gold course-sidebar">
-					<div class="entry-meta">
+					<div class="entry-meta margin-top-xxl">
 						<?php
 							$course_duration = get_post_meta( get_the_ID(), 'course_duration', true );
 							$course_language = get_post_meta( get_the_ID(), 'course_language', true );
 							$course_url = get_post_meta( get_the_ID(), 'course_apply_url', true );
 							if ( !empty( $course_duration ) || !empty( $course_language ) || !empty( $course_url ) ) {
-								echo '<div class="columns is-vcentered margin-vertical-big">';
 									if ( !empty( $course_url ) ) {
 										echo '<div class="column">';
 											echo '<a href="'.$course_url.'" class="button is-info">Register here</a>';
 										echo '</div>';
 									}
 									if ( !empty( $course_duration ) ) {
-										echo '<div class="column">';
+										echo '<div>';
 											echo '<strong>Duration: </strong>';
 											echo $course_duration;
 										echo '</div>';
 									}
 									if ( !empty( $course_language ) ) {
-										echo '<div class="column">';
+										echo '<div>';
 											echo '<strong>Language: </strong>';
 											echo $course_language;
 										echo '</div>';
 									}
-								echo '</div>';
 							}
 						 ?>
+
+						 <a href="" class="button register margin-top-bigger">Register Here</a>
 					</div>
 				</div>
 			<div class="column is-9">
@@ -46,10 +46,11 @@
 						<?php the_content(); ?>
 					</div>
           <?php
-            $upcoming_events = Certificates_Website::get_upcoming_course_events( get_the_ID() );
+						$upcoming_events = Certificates_Website::get_upcoming_course_events( get_the_ID() );
+
             if ( !empty( $upcoming_events ) ) {
-              echo '<h4>Upcoming Courses</h4>';
-              echo '<div class="columns padding-top-large">';
+              echo '<h3>Upcoming Dates</h3>';
+              echo '<div class="columns padding-top-bigger">';
                 foreach ( $upcoming_events as $event ) {
 									$entry_date = get_post_meta( $event->ID, 'event_dtstart_date', true );
 

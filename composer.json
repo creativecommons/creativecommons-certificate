@@ -1,7 +1,7 @@
 {
   "name": "creativecommons/creativecommons-certificate",
   "description": "The Creative Commons Certificate Child Theme",
-  "version": "2020.11.3",
+  "version": "2020.11.4",
   "type": "wordpress-theme",
   "license": "GPL-2.0-or-later",
   "authors": [
@@ -18,7 +18,7 @@
   ],
   "require": {
     "composer/installers": "~1.0",
-    "creativecommons/wp-theme-base": "2020.4.1",
+    "creativecommons/wp-theme-base": "2020.11.1",
     "jakub-onderka/php-parallel-lint": "^1.0"
   },
   "scripts": {
