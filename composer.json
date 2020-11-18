@@ -1,6 +1,7 @@
 {
   "name": "creativecommons/creativecommons-certificate",
   "description": "The Creative Commons Certificate Child Theme",
+  "version": "2020.11.1",
   "type": "wordpress-theme",
   "license": "GPL-2.0-or-later",
   "authors": [
