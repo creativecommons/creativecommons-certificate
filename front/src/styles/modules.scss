@@ -301,25 +301,32 @@
   }
 
   // Course template
-  &.single-cc_course .single-header--course {
-    padding-top: 0;
+  &.single-cc_course {
+    .single-header--course {
+      padding-top: 0;
+      background-color: $grey-lighter !important;
 
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: flex-start;
-      min-height: 350px;
+      .wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        min-height: 350px;
+      }
+
+      .breadcrumbs {
+        margin-left: $space-larger;
+      }
+
+      .title-box {
+        z-index: 2;
+        display: inline-block;
+        transform: translateY($space-large * 2);
+      }
     }
 
-    .breadcrumbs {
-      margin-left: $space-larger;
-    }
-
-    .title-box {
-      z-index: 2;
-      display: inline-block;
-      transform: translateY($space-large * 2);
+    .course-sidebar {
+      padding-top: $space-larger !important;
     }
   }
 

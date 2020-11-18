@@ -9,15 +9,8 @@
 		</div>
 	</header>
 	<div class="container">
-		<div class="columns is-centered">
-		<div class="column is-4 has-background-soft-gold">
-			wow
-		</div>
-			<div class="column is-8">
-				<section class="entry-page-content">
-					<div class="text-format body-big">
-						<?php the_content(); ?>
-					</div>
+		<div class="columns margin-top-0">
+		<div class="column is-3 has-background-soft-gold course-sidebar">
 					<div class="entry-meta">
 						<?php
 							$course_duration = get_post_meta( get_the_ID(), 'course_duration', true );
@@ -45,6 +38,12 @@
 								echo '</div>';
 							}
 						 ?>
+					</div>
+				</div>
+			<div class="column is-9">
+				<section class="entry-page-content margin-top-xxl padding-horizontal-xxl">
+					<div class="text-format body-big">
+						<?php the_content(); ?>
 					</div>
           <?php
             $upcoming_events = Certificates_Website::get_upcoming_course_events( get_the_ID() );

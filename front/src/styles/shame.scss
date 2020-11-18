@@ -120,3 +120,24 @@ main {
 .has-background-soft-gold {
   background-color: #fef6d8;
 }
+
+.single,
+.page {
+  .main-content {
+    padding-bottom: 1rem;
+  }
+}
+
+// Extend sidebar bg color to the edge of the viewport
+.course-sidebar {
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 500px;
+    background-color: #fef6d8;
+    right: 100%;
+  }
+}
