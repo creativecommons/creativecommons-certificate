@@ -3,7 +3,7 @@
  * Functions: list
  *
  * @version 2020.05.1
- * @package wp-theme-certificates
+ * @package creativecommons-certificate
  */
 
 /* Theme Constants (to speed up some common things) ------*/

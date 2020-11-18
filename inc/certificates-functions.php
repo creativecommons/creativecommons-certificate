@@ -8,7 +8,7 @@ class Certificates_Website {
 	}
 	// Add a class to the page body to override styles from the base theme
 	public static function add_body_class( $classes ) {
-    return array_merge( $classes, array( 'wp-theme-certificates' ) );
+    return array_merge( $classes, array( 'creativecommons-certificate' ) );
 	}
 	public static function modify_breadcrumb_seperator( ) {
 		return '<i class="icon chevron-right is-6"></i>';

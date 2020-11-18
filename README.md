@@ -35,11 +35,11 @@ Add the following to your `composer.json` file:
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/creativecommons/wp-theme-certificates"
+      "url": "https://github.com/creativecommons/creativecommons-certificate"
     }
   ],
   "require": {
-    "creativecommons/wp-theme-certificates": "dev-master"
+    "creativecommons/creativecommons-certificate": "dev-master"
   }
 }
 ```
