@@ -1,5 +1,5 @@
 {
-  "name": "wp-theme-certificates",
+  "name": "creativecommons-certificate",
   "version": "2020.6.1",
   "description": "This is a child theme created for the Certificates website",
   "main": "index.js",
@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/creativecommons/wp-theme-certificates.git"
+    "url": "git+https://github.com/creativecommons/creativecommons-certificate.git"
   },
   "keywords": [
     "WordPress",
@@ -35,7 +35,7 @@
   "author": "Creative Commons",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/creativecommons/wp-theme-certificates/issues"
+    "url": "https://github.com/creativecommons/creativecommons-certificate/issues"
   },
-  "homepage": "https://github.com/creativecommons/wp-theme-certificates#readme"
+  "homepage": "https://github.com/creativecommons/creativecommons-certificate#readme"
 }

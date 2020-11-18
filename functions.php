@@ -3,14 +3,14 @@
  * Functions: list
  *
  * @version 2020.05.1
- * @package wp-theme-certificates
+ * @package creativecommons-certificate
  */
 
 /* Theme Constants (to speed up some common things) ------*/
 define( 'THEME_LOCAL_URI', get_stylesheet_directory_uri() );
 define( 'THEME_PARENT_URI', get_template_directory_uri() );
 
-/* 
+/*
 	Include Custom post types
 */
 require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-course-cpt-plugin/cc-course-cpt-plugin.php';
