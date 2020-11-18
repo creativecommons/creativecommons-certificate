@@ -48,7 +48,7 @@
         </li>
       <?php endwhile; ?>
       </ul>
-      <div class="additional-info padding-top-small padding-bottom-bigger body-bigger padding-touch-horizontal">
+      <div class="additional-info padding-top-small padding-bottom-bigger body-bigger">
         <?php echo $additional_info; ?>
       </div>
     </div>

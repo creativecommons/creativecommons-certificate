@@ -161,5 +161,4 @@ class Event_Metabox extends Metabox {
 	}
 }
 
-new Event_Metabox( 'event', 'Event related data', 'cc_events', [ 'context' => 'normal' ] );
-
+new Event_Metabox( 'event', 'Event Related Data', 'cc_events', [ 'context' => 'normal' ] );

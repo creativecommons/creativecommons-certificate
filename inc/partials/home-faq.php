@@ -6,13 +6,14 @@
 $featured_faq_titles = get_field('featured_faqs');
 $faqs = get_faqs_by_titles($featured_faq_titles);
 ?>
+
 <div>
   <h2>Frequently Asked Questions</h2>
   <ul class="margin-top-large margin-bottom-large accordion">
     <?php foreach ($faqs as $faq) : ?>
       <li class="accordion-item">
         <button class="accordion-header padding-top-big padding-bottom-big" id="<?php echo 'accordion-'.$faq['question']; ?>" aria-expanded="false" aria-controls="<?php echo 'section-'.$faq['question']; ?>">
-          <span class="has-color-dark-slate-gray body-big has-text-left">
+          <span class="has-color-dark-slate-gray has-text-left body-big">
             <?php echo $faq['question']; ?>
           </span>
           <span class="margin-left-small icon has-text-black">
@@ -21,7 +22,7 @@ $faqs = get_faqs_by_titles($featured_faq_titles);
             </svg>
           </span>
         </button>
-        <div class="accordion-body accordion-body padding-left-small padding-right-small padding-bottom-normal" role="region" aria-labelledby="<?php echo 'accordion-'.$faq['question']; ?>" id="<?php echo 'section-'.$faq['question']; ?>" hidden>
+        <div class="accordion-body accordion-body padding-left-small padding-right-small padding-vertical-normal body-big" role="region" aria-labelledby="<?php echo 'accordion-'.$faq['question']; ?>" id="<?php echo 'section-'.$faq['question']; ?>" hidden>
           <?php echo $faq['answer']; ?>
         </div>
       </li>

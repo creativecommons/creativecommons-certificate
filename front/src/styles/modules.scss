@@ -71,8 +71,8 @@
   }
 }
 
-// Overrides for the header
 .wp-theme-certificates {
+  // Overrides for the header
   .single-header,
   .page-header {
     color: $color-black;
@@ -108,121 +108,236 @@
       padding-left: $space-small;
     }
   }
-}
 
-// Overrides for the homepage hero
-.wp-theme-certificates .home-hero {
-  color: $color-black;
-  background-color: $color-primary;
-  position: relative;
-  overflow: hidden;
+  // Overrides for the homepage hero
+  .home-hero {
+    color: $color-black;
+    background-color: $color-primary;
+    position: relative;
+    overflow: hidden;
 
-  .content {
-    padding: 0 $space-big !important; // :-(
-    padding-top: $space-bigger !important; // :-(
+    .content {
+      padding-top: $space-bigger !important; // :-(
 
-    @include tablet() {
-      z-index: 1;
-      position: relative;
-      width: 500px;
-      max-width: 100%;
-      margin-right: auto;
-      margin-left: 0;
-      padding: 0;
-      padding-top: 96px !important; // to override vocab
-    }
-  }
+      @include mobile() {
+        padding-bottom: 0 !important; // :-(
+      }
 
-  .img-wrapper {
-    img {
-      width: 100%;
-      margin-bottom: -6rem;
+      @include tablet() {
+        z-index: 1;
+        position: relative;
+        width: 500px;
+        max-width: 100%;
+        margin-right: auto;
+        margin-left: 0;
+        padding: 0;
+        padding-top: 96px !important; // to override vocab
+      }
     }
 
-    @include mobile {
-      &:after {
-        content: "";
+    .img-wrapper {
+      img {
+        width: 100%;
+        margin-bottom: -6rem;
+      }
+
+      @include mobile {
+        &:after {
+          content: "";
+          position: absolute;
+          top: calc(100% + 4rem);
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          display: block;
+          background-color: whitesmoke;
+          height: 2000px;
+          z-index: 1;
+        }
+      }
+
+      @include tablet() {
         position: absolute;
-        top: calc(100% + 4rem);
+        top: 0;
         left: 0;
         right: 0;
-        bottom: 0;
-        width: 100%;
-        display: block;
-        background-color: whitesmoke;
-        height: 2000px;
-        z-index: 1;
+        text-align: right;
+        z-index: 0;
+
+        img {
+          width: calc(100% - 400px); // container width - content width
+          margin-right: -4rem;
+          height: auto;
+        }
       }
     }
 
-    @include tablet() {
+    .courses,
+    .additional-info {
+      position: relative;
+      z-index: 2;
+    }
+
+    .courses {
+      @include mobile() {
+        .course {
+          margin-bottom: $space-normal;
+        }
+      }
+
+      @include tablet() {
+        display: flex;
+        align-items: stretch;
+        column-gap: $space-normal;
+        margin-bottom: $space-bigger;
+      }
+
+      @include desktop() {
+        column-gap: $space-larger;
+      }
+    }
+
+    &:after {
+      content: "";
+      display: block;
       position: absolute;
-      top: 0;
+      bottom: 0;
       left: 0;
       right: 0;
-      text-align: right;
-      z-index: 0;
-
-      img {
-        width: calc(100% - 400px); // container width - content width
-        margin-right: -4rem;
-        height: auto;
-      }
+      width: 100%;
+      background-color: $color-lighter-gray;
+      height: 180px;
     }
   }
 
-  .courses,
-  .additional-info {
-    position: relative;
-    z-index: 2;
-  }
-
-  .courses {
-    @include mobile() {
-      .course {
-        margin-bottom: $space-normal;
-      }
-    }
-
+  .after-faq {
     @include touch() {
-      padding: 0 $space-big;
+      margin-top: $space-xl;
+    }
+  }
+
+  // FAQ Page
+  &.page-template-template-faq {
+    .faq-sidebar {
+      position: sticky;
+      top: $space-normal;
     }
 
-    @include tablet() {
+    .faq-sidebar .active {
+      font-weight: bold;
+    }
+  }
+
+  .home-tweets {
+    .home-tweets__header {
+      @include tablet() {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      @include touch() {
+        .button.twitter {
+          display: none;
+        }
+      }
+    }
+
+    .home-tweets__tweets {
+      @include desktop() {
+        display: flex;
+        gap: $space-large;
+      }
+    }
+
+    .tweet {
+      width: 100%;
+      margin-bottom: $space-normal;
+
+      @include desktop() {
+        margin-bottom: 0;
+        width: 33.33%;
+      }
+    }
+  }
+
+  // Stats shortcode
+  .stats {
+    // Hide WordPress generated brs
+    br {
+      display: none;
+    }
+
+    .number {
+      font-size: 70px;
+      line-height: 1.2;
+    }
+
+    .title {
+      margin: 0;
+      flex-grow: 1;
+    }
+
+    @include touch {
+      flex-direction: column;
+
+      .stat {
+        margin: $space-larger 0;
+      }
+
+      .column {
+        display: block;
+      }
+
+      .title {
+        font-size: 16px;
+      }
+
+      .number,
+      .caption {
+        display: inline;
+        font-family: $family-heading;
+        text-transform: uppercase;
+        font-size: $font-size-h3 !important;
+      }
+      .number:after {
+        content: " ";
+      }
+    }
+
+    @include desktop() {
       display: flex;
+      justify-content: flex-start;
       align-items: stretch;
       column-gap: $space-larger;
-      margin-bottom: $space-bigger;
+      margin: $space-large 0;
+
+      .stat {
+        display: flex;
+        flex-direction: column;
+        flex: 0;
+        min-width: 170px;
+      }
     }
   }
 
-  &:after {
-    content: "";
+  // Styles for columns shortcode
+  .cols {
+    margin-top: $space-big;
+    column-fill: auto;
     display: block;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
     width: 100%;
-    background-color: $color-lighter-gray;
-    height: 180px;
-  }
-}
+    // Force two columns on mobile (maybe make this a setting later on)
+    column-count: 2;
 
-.wp-theme-certificates .after-faq {
-  @include touch() {
-    margin-top: $space-xl;
-  }
-}
+    @include tablet() {
+      column-count: var(--col-count);
+    }
 
-// FAQ Page
-.wp-theme-certificates.page-template-template-faq {
-  .faq-sidebar {
-    position: sticky;
-    top: $space-normal;
-  }
-
-  .faq-sidebar .active {
-    font-weight: bold;
+    // Ensure there is no space before the first item
+    br:first-child {
+      display: none;
+    }
   }
 }

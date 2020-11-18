@@ -50,6 +50,10 @@ span.icon {
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      &:focus {
+        outline-color: $color-forest-green;
+      }
     }
 
     &:hover {
@@ -92,16 +96,23 @@ span.icon {
   margin-left: 0 !important;
 }
 
-// Fix bad coluns ruining the entire layout
+// Fix bad columns ruining the entire layout
 main {
   max-width: 100%;
   display: block;
-  overflow-x: hidden;
 }
 
+// A class for the standard horizontal padding most components have on mobile.
 .padding-touch-horizontal {
   @include touch() {
     padding-left: $space-big;
     padding-right: $space-big;
+  }
+}
+
+@include touch() {
+  .container {
+    padding-left: $space-normal;
+    padding-right: $space-normal;
   }
 }

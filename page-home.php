@@ -23,7 +23,7 @@
   include get_template_part('inc/partials/home', 'hero');
   ?>
 
-  <section class="has-background-grey-lighter padding-top-big padding-bottom-xl padding-touch-horizontal">
+  <section class="has-background-grey-lighter padding-top-big padding-bottom-xl">
     <div class="container">
 
       <div class="columns is-variable is-6 padding-bottom-xl">
@@ -62,7 +62,7 @@
 
     </div>
   </section>
-  <section class="padding-top-xl padding-bottom-xxl padding-touch-horizontal">
+  <section class="padding-top-xl padding-bottom-xxl">
     <div class="container">
 
       <div class="padding-bottom-xl">
@@ -72,23 +72,19 @@
         </div>
       </div>
 
-      <div>
-        <div class="columns margin-bottom-big">
-          <div class="column">
-            <h2>Conversations in the Community</h2>
-          </div>
-          <div class="column is-narrow">
-            <a class="button small twitter margin-right-big" target="_blank" rel="noreferrer nofollow" href="https://twitter.com/hashtag/OpenGLAM">See #OpenGLAM Posts</a>
-          </div>
+      <div class="home-tweets">
+        <div class="margin-bottom-big home-tweets__header">
+          <h2>Conversations in the Community</h2>
+          <a class="button small twitter margin-right-big" target="_blank" rel="noreferrer nofollow" href="https://twitter.com/hashtag/OpenGLAM">See #OpenGLAM Posts</a>
         </div>
-        <div class="columns is-variable is-6">
+        <div class="home-tweets__tweets is-variable is-6">
           <?php if( have_rows('featured_tweets') ): while( have_rows('featured_tweets') ) : the_row();
               $tweet = get_sub_field('tweet_url'); ?>
-            <div class="column">
-              <div class="embed-container">
-                <?php echo $tweet; ?>
+              <div class="tweet">
+                <div class="embed-container">
+                  <?php echo $tweet; ?>
+                </div>
               </div>
-            </div>
         <?php endwhile; endif; ?>
         </div>
       </div>

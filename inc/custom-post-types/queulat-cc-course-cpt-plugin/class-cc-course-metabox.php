@@ -48,4 +48,4 @@ class Course_Metabox extends Metabox {
 	}
 }
 
-new Course_Metabox( 'course', 'Course related data', 'cc_course', [ 'context' => 'normal' ] );
+new Course_Metabox( 'course', 'Course Related Data', 'cc_course', [ 'context' => 'normal' ] );
