@@ -107,6 +107,17 @@
       padding-right: $space-small;
       padding-left: $space-small;
     }
+
+    &.breadcrumbs--dark {
+      background-color: black;
+      padding: $space-small $space-normal;
+      display: inline-block;
+      color: $color-dark-gray;
+
+      a {
+        color: white;
+      }
+    }
   }
 
   // Overrides for the homepage hero

@@ -13,7 +13,7 @@
 	<div class="container">
 		<div class="columns">
 			<div class="column is-8">
-				<section class="entry-page-content padding-top-xl padding-touch-horizontal">
+				<section class="entry-page-content padding-top-xl">
 					<div class="text-format content body-big">
 						<?php the_content(); ?>
 					</div>

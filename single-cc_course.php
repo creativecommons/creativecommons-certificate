@@ -6,14 +6,17 @@
 	<header class="single-header">
 		<div class="container">
 			<div class="columns is-centered">
-				<div class="column is-8">
-					<?php get_template_part( 'inc/partials/entry/page', 'header' ); ?>
+				<div class="column is-12">
+					<?php get_template_part( 'inc/partials/entry/course', 'header' ); ?>
 				</div>
 			</div>
 		</div>
 	</header>
 	<div class="container">
 		<div class="columns is-centered">
+		<div class="column is-4">
+			wow
+		</div>
 			<div class="column is-8">
 				<section class="entry-page-content">
 					<div class="text-format body-big">

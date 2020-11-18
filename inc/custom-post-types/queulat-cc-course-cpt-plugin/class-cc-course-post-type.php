@@ -65,11 +65,8 @@ class Cc_Course_Post_Type extends Post_Type {
 			'can_export'            => true,
 			'delete_with_user'      => true,
 			'rewrite'               => [
-				'with_front' => true,
-				'feeds'      => true,
-				'pages'      => true,
-				'slug'       => 'cc_course',
-				'ep_mask'    => 1,
+				'with_front' => false,
+				'slug' => 'certificates'
 			],
 			'supports'              => [
 				0 => 'title',
