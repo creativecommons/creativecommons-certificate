@@ -136,8 +136,17 @@ main {
     position: absolute;
     top: 0;
     bottom: 0;
-    width: 500px;
+    width: 1000px;
     background-color: #fef6d8;
     right: 100%;
+  }
+}
+
+.cc-box {
+  display: flow-root;
+
+  br:first-child,
+  br:last-child {
+    display: none;
   }
 }

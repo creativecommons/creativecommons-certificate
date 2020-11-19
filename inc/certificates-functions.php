@@ -27,6 +27,10 @@ class Certificates_Website {
 			$a = shortcode_atts( array( 'title' => '', 'number' => '', 'subtitle' => '' ), $atts );
 			return '<div class="stat"><h3 class="title is-5">'.$a['title'].'</h3><span class="number has-text-weight-bold	is-size-1">'.$a['number'].'</span><p class="caption has-text-weight-bold">'.$a['subtitle'].'</p></div>';
 	}
+	// @todo: Make this do more (add colors)/throw this out and use the card somehow
+	public static function register_box_shortcode( $atts, $content ) {
+			return '<div class="has-background-grey-lighter padding-vertical-big padding-horizontal-bigger cc-box margin-bottom-larger">'.$content.'</div>';
+	}
 };
 
 // add the filter
@@ -39,6 +43,7 @@ add_filter( 'wpseo_breadcrumb_separator', array( 'Certificates_Website', 'modify
 add_shortcode( 'columns', array( 'Certificates_Website', 'register_columns_shortcode') );
 add_shortcode( 'stats', array( 'Certificates_Website', 'register_stats_shortcode') );
 add_shortcode( 'stat', array( 'Certificates_Website', 'register_stat_shortcode') );
+add_shortcode( 'box', array( 'Certificates_Website', 'register_box_shortcode') );
 
 /**
  * Populate the 'Featured FAQs' dropdown on the homepage edit page with the actual FAQs.
