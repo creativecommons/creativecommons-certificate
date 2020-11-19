@@ -32,12 +32,12 @@
         </div>
         <?php // Links Section (Hardcoded for now) ?>
         <div class="column after-faq">
-          <h5 class="margin-bottom-normal"><a href="" class="has-text-forest-green">Course Content</a></h5>
+          <h5 class="margin-bottom-normal"><a href="/course-content" class="has-text-forest-green">Course Content</a></h5>
           <p>Access current course content here. Unless otherwise noted, all course content is licensed CC BY 4.0. Also available in audio and remixed for a book publication!</p>
 
           <hr />
 
-          <h5 class="margin-bottom-normal"><a href="" class="has-text-forest-green">Registration</a></h5>
+          <h5 class="margin-bottom-normal"><a href="/registration" class="has-text-forest-green">Registration</a></h5>
           <p>Register for one of our upcoming courses, and join a growing number of CC Certified professionals working in education, libraries, and cultural heritage.</p>
         </div>
       </div>
