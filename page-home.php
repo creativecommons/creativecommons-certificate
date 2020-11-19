@@ -86,7 +86,7 @@
                   <img src="<?php echo $post->featured_media_url; ?>" alt="<?php echo $post->featured_media_alt_text; ?>">
                 </a>
               </figure>
-              <div class="padding-big">
+              <div class="padding-big body">
                 <h4 class="subtitle is-5">
                   <a href="<?php echo $post->link; ?>">
                     <?php echo $post->title->rendered; ?>
@@ -101,7 +101,7 @@
               </p>
             </div>
           </div>
-            <a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>" class="is-block margin-top-big has-text-weight-bold">
+            <a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>" class="is-block margin-top-big has-text-weight-bold margin-bottom-large">
               <?php echo $link_title; ?>
             </a>
         </div>
