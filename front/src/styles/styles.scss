@@ -7,8 +7,6 @@ $color-primary: rgb(254, 246, 216);
 @import "@creativecommons/vocabulary/scss/spacing.scss";
 @import "@creativecommons/vocabulary/scss/typography.scss";
 
-@import "mixins";
 @import "base";
 @import "modules";
-@import "widgets";
 @import "shame";

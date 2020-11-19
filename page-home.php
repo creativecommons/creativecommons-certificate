@@ -14,7 +14,7 @@
  */
 
   get_header();
-
+  $featured_posts = load_home_featured_posts();
 ?>
 
 <main>
@@ -65,19 +65,57 @@
   <section class="padding-top-xl padding-bottom-xxl">
     <div class="container">
 
-      <div class="padding-bottom-xl">
+      <section class="padding-bottom-xl">
         <h2>Education News From The Blog</h2>
 
-        <div class="columns is-variable is-6">
+        <div class="education-news-home margin-top-bigger">
+        <?php if( have_rows('featured_news') ): while( have_rows('featured_news') ) : the_row();
+          $post = $featured_posts[get_sub_field('post_id')];
+          $date = new DateTime($post->date);
+          $pretty_date = $date->format('F d, Y');
+
+          $link = get_sub_field('additional_link');
+          $link_url = $link['url'];
+          $link_title = $link['title'];
+          $link_target = $link['target'] ? $link['target'] : '_self';
+        ?>
+          <div class="education-news-home__post">
+            <div class="has-background-soft-gold">
+              <figure class="image is-5by3">
+                <a href="<?php echo $post->link; ?>">
+                  <img src="<?php echo $post->featured_media_url; ?>" alt="<?php echo $post->featured_media_alt_text; ?>">
+                </a>
+              </figure>
+              <div class="padding-big">
+                <h4 class="subtitle is-5">
+                  <a href="<?php echo $post->link; ?>">
+                    <?php echo $post->title->rendered; ?>
+                  </a>
+                </h4>
+                <p class="caption margin-top-normal">
+                  <span><?php echo $post->author_name; ?></span>
+                  <svg class="margin-horizontal-smaller" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle opacity="0.2" cx="3" cy="3" r="3" fill="black" />
+                </svg>
+                <span><?php echo $pretty_date; ?></span>
+              </p>
+            </div>
+          </div>
+            <a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>" class="is-block margin-top-big has-text-weight-bold">
+              <?php echo $link_title; ?>
+            </a>
         </div>
+        <?php endwhile; endif; ?>
       </div>
+
+    </section>
 
       <div class="home-tweets">
         <div class="margin-bottom-big home-tweets__header">
           <h2>Conversations in the Community</h2>
           <a class="button small twitter margin-right-big" target="_blank" rel="noreferrer nofollow" href="https://twitter.com/hashtag/OpenGLAM">See #OpenGLAM Posts</a>
         </div>
-        <div class="home-tweets__tweets is-variable is-6">
+        <div class="home-tweets__tweets">
           <?php if( have_rows('featured_tweets') ): while( have_rows('featured_tweets') ) : the_row();
               $tweet = get_sub_field('tweet_url'); ?>
               <div class="tweet">

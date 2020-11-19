@@ -81,3 +81,96 @@ function get_faqs_by_titles($titles = array(), $faqs = array()) {
 
 	return $filtered_faqs;
 }
+
+// @todo: Also store in transient (even if short)
+function load_home_featured_posts() {
+	$url = 'https://creativecommons.org/wp-json/wp/v2/posts?per_page=50';
+	$media_url = 'https://creativecommons.org/wp-json/wp/v2/media';
+	$author_url = 'https://creativecommons.org/wp-json/wp/v2/users';
+
+	$transient_key = 'home_posts' . $url;
+
+	foreach ( get_field( 'featured_news', get_option( 'page_on_front' ) ) as $news ) {
+		if ($news['post_id']) {
+			$url .= '&include[]=' . $news['post_id'];
+		}
+	}
+
+	if ( false === ( $results = get_transient( $transient_key ) ) ) {
+
+		$posts = query_api($url);
+
+		foreach ($posts as $post) {
+			// Attach featured image info
+			if ( ! empty( $post->featured_media ) ) {
+				$api_response = query_api( $media_url . '/' . $post->featured_media );
+
+				if ( ! empty( $api_response ) ) {
+					$post->featured_media_url      = $api_response->media_details->sizes->cc_list_post_thumbnail->source_url;
+					$post->alt_text = $api_response->alt_text;
+				}
+			}
+
+			// Attach author info
+			if ( ! empty( $post->author ) ) {
+				$api_response = query_api( $author_url . '/' . $post->author );
+
+				if ( ! empty( $api_response ) ) {
+					$post->author_name = $api_response->name;
+					$post->author_url = $api_response->link;
+				}
+			}
+		}
+
+		$results = [];
+		foreach ($posts as $post) {
+			$results[$post->id] = $post;
+		}
+
+    set_transient( $transient_key, $results,  HOUR_IN_SECONDS ); // @todo Maybe longer?
+	}
+
+	return $results;
+}
+
+function query_api( $url ) {
+	$response  = wp_remote_get( $url );
+	$http_code = wp_remote_retrieve_response_code( $response );
+	if ( $http_code == 200 ) {
+		$api_response = json_decode( wp_remote_retrieve_body( $response ) );
+		return $api_response;
+	} else {
+		return false;
+	}
+}
+
+function load_org_blog_posts() {
+	$posts_url = 'https://creativecommons.org/wp-json/wp/v2/posts?per_page=50';
+	$posts = query_api( $posts_url );
+
+	if(!$posts) {
+		return [];
+	}
+
+	return $posts;
+}
+
+/**
+ * This only runs on the back-end, when editing a page using the page-home.php template.
+ * @todo Maybe add a short transient here? Not sure if necessary since on the back-end only.
+ * @todo Maybe need to load more than 50 most recent posts? Download multiple pages and build list.
+ */
+function acf_load_blog_posts( $field ) {
+    // reset choices
+		$field['choices'] = array();
+		$blog_posts = load_org_blog_posts();
+
+		foreach ($blog_posts as $post) {
+			$field['choices'][$post->id] = $post->title->rendered;
+		}
+
+    // return the field
+    return $field;
+}
+
+add_filter('acf/load_field/name=blog_posts', 'acf_load_blog_posts');

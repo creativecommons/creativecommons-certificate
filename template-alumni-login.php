@@ -13,11 +13,14 @@
 
 	<div class="container">
 		<div class="columns">
-			<div class="column is-12">
+			<div class="column is-8">
 				<section class="entry-page-content padding-top-xl">
 					<div class="text-format content body-big">
 						<?php the_content(); ?>
-            <?php wp_login_form(); ?>
+
+            <div class="alumni-login has-background-grey-lighter padding-vertical-bigger padding-horizontal-large">
+              <?php wp_login_form(); ?>
+            </div>
 					</div>
 				</section>
 			</div>

@@ -1,0 +1,133 @@
+{
+    "key": "group_5fb61a0866259",
+    "title": "Home Featured Posts",
+    "fields": [
+        {
+            "key": "field_5fb61a0e23aa0",
+            "label": "Featured News",
+            "name": "featured_news",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "Add featured post",
+            "sub_fields": [
+                {
+                    "key": "field_5fb61a1c23aa1",
+                    "label": "Post",
+                    "name": "post_id",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "62469": "Meet the Winners of the CC Open GLAM Platform Activities Fund!",
+                        "62448": "Can Open GLAM Reshape the Fashion Heritage Narrative?",
+                        "62460": "Meet CC India, Our Next Feature for CC Network Fridays!",
+                        "62430": "A Look Back at the 2020 Virtual CC Global Summit",
+                        "62419": "Creative Commons 2019 Annual Report",
+                        "62404": "The Linked Commons 2.0: What&#8217;s New?",
+                        "62362": "Important Updates to the Creative Commons Catalog",
+                        "62346": "Say Hello to Our New CC Open Source Website!",
+                        "62340": "You Can Now Sponsor CC’s Open Source Work on GitHub!",
+                        "62328": "Making the CC Global Network Work Better for You",
+                        "62320": "Facing 2020 at the CC Global Summit: A Look at This Year’s Keynotes",
+                        "62316": "Internationalizing the Open COVID Pledge: Translations and Outreach",
+                        "62305": "Meet CC Tanzania, Our Next Feature for CC Network Fridays!",
+                        "62277": "Implementing the Marrakesh Treaty in Latin America: A Look at the Experiences of Four CC Community Members",
+                        "62273": "Why Universal Access to Information Matters",
+                        "62254": "Registration Is Now Open for the CC Global Summit! Join Us on 19–23 October!",
+                        "62262": "In Support of the Wikimedia Foundation WIPO Application",
+                        "62247": "Six Projects Get Funding from the Creative Commons Copyright Platform Activities Fund",
+                        "62237": "Meet CC Bangladesh, Our Next Feature for CC Network Fridays!",
+                        "62226": "We’re Happy to Introduce Our Newest CC Chapter: CC Austria!",
+                        "62215": "Creative Commons Celebrates International Literacy Day",
+                        "62208": "Welcome to the New CC Chapter in Perú!",
+                        "62201": "Download Shepard Fairey&#8217;s Creative Commons Logo Remix",
+                        "62178": "CC Open Education Platform Activities Fund: Six Winners!",
+                        "62165": "Creative Commons Is Now Leading the Open COVID Pledge—Here’s What That Means",
+                        "62146": "Meet the Program Committee Making the 2020 CC Global Summit a Reality!",
+                        "62131": "Introducing Our Google Season of Docs 2020 Participants",
+                        "62113": "Why cOAlition S’ Rights Retention Strategy Protects Researchers",
+                        "62085": "From CC&#8217;s New CEO: Working Towards Our Shared Future",
+                        "62087": "Meet CC Netherlands, Our Next Feature for CC Network Fridays!",
+                        "62080": "Your Chance to Perform for the CC Global Summit!",
+                        "62057": "Artificial Intelligence and Creativity: Can Machines Write Like Jane Austen?",
+                        "62034": "Artificial Intelligence and Creativity: Why We&#8217;re Against Copyright Protection for AI-Generated Output",
+                        "62021": "Sharing Indigenous Cultural Heritage Online: An Overview of GLAM Policies",
+                        "62001": "Nearly 500 CC-licensed Education Images are Now Available!",
+                        "61971": "From Educators to Illustrators: Meet the Users of CC Search",
+                        "61955": "CC License Suite 4.0 and CC0 Are Now Available in Romanian!",
+                        "61840": "The Increasingly Open World of Photography: A Conversation With Exposure’s Luke Beard",
+                        "61931": "Meet CC Italy, Our First Feature for CC Network Fridays!",
+                        "61918": "Announcing Creative Commons’ New CEO, <br> Catherine Stihler",
+                        "61800": "Say What? Jonathan Poritz Records All CC Certificate Content As Openly Licensed Audio!",
+                        "61787": "Introducing the CC Global Network Platforms!",
+                        "61779": "The CC Global Summit Is Going Virtual—See Our Latest Call for Proposals!",
+                        "61753": "German Public Broadcaster ZDF Releases Dozens of Videos Under CC Licenses",
+                        "61710": "Sharing Openly Licensed Content on Social Media: A Conversation with GLAM",
+                        "61697": "The CC License Suite 4.0 and CC0 Are Now Available in Slovenian!",
+                        "61692": "A Statement of Solidarity and Work to Be Done",
+                        "61670": "Our Community is Reducing the Impact of COVID-19 on Science, Education, and Culture",
+                        "61653": "Leveraging OER for COVID-19 Response Efforts and International Partnerships",
+                        "61606": "CC Search Celebrates Its First Birthday!"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_5fb61a4523aa2",
+                    "label": "Additional Link",
+                    "name": "additional_link",
+                    "type": "link",
+                    "instructions": "Add an additional link below the featured post. Generally used to link to blog category pages on https:\/\/creativecommons.org.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array"
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1605771784
+}

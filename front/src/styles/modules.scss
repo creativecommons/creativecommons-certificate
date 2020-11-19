@@ -273,6 +273,11 @@
     }
   }
 
+  .alumni-login {
+    width: 400px;
+    max-width: 100%;
+  }
+
   // Scholarship "cards"
   .scholarship-recipients {
     @include desktop() {
@@ -406,6 +411,38 @@
     // Ensure there is no space before the first item
     br:first-child {
       display: none;
+    }
+  }
+
+  .education-news-home {
+    @include tablet() {
+      display: flex;
+      align-items: stretch;
+      column-gap: $space-normal;
+      margin-bottom: $space-bigger;
+    }
+
+    @include desktop() {
+      column-gap: $space-larger;
+    }
+
+    .education-news-home__post {
+      display: flex;
+      flex-direction: column;
+
+      .has-background-soft-gold {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .has-background-soft-gold > .body {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      flex: 1;
     }
   }
 }
