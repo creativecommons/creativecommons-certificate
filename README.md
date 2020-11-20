@@ -9,7 +9,7 @@
 
 ### Plugin and Theme Requirements
 
-Must be used with the parent theme [wp-theme-base](https://github.com/creativecommons/wp-theme-base).
+Must be used with the parent theme [creativecommons-base](https://github.com/creativecommons/creativecommons-base).
 
 Relies on the following plugins:
 
