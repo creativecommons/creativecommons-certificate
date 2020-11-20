@@ -31,6 +31,12 @@ class Certificates_Website {
 	public static function register_box_shortcode( $atts, $content ) {
 			return '<div class="has-background-grey-lighter padding-vertical-big padding-horizontal-bigger cc-box margin-bottom-larger">'.$content.'</div>';
 	}
+	// Pressbooks hides the WordPress Admin bar, but doesn't remove the empty space :/
+	public static function remove_admin_bar_top_whitespace(  ) {
+		if ( is_admin_bar_showing() ) {
+      echo '<style type="text/css">html {margin-top: 0 !important;}</style>';
+		}
+	}
 };
 
 // add the filter
@@ -38,6 +44,7 @@ add_filter( 'cc_theme_base_set_default_size_logo', array( 'Certificates_Website'
 add_filter( 'cc_theme_base_set_default_logo', array( 'Certificates_Website', 'set_certificates_logo' ) );
 add_filter( 'body_class', array( 'Certificates_Website', 'add_body_class') );
 add_filter( 'wpseo_breadcrumb_separator', array( 'Certificates_Website', 'modify_breadcrumb_seperator') );
+add_filter( 'wp_head', array( 'Certificates_Website', 'remove_admin_bar_top_whitespace'), 11 );
 
 // Register shortcodes
 add_shortcode( 'columns', array( 'Certificates_Website', 'register_columns_shortcode') );

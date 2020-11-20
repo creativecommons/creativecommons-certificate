@@ -2,11 +2,6 @@
 // Code here should be commented with a relevant issue or explanation.
 @import "bulma/sass/utilities/_all.sass";
 
-// Pressbooks hides the WordPress Admin bar, but doesn't remove the empty space :/
-html {
-  margin-top: 0 !important;
-}
-
 // Make sure page is always at least as tall as the user's screen (so don't see ugly whitespace below footer on short pages)
 // will fail gracefully on browsers without grid support :)
 .creativecommons-certificate {
