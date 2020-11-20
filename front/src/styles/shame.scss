@@ -7,16 +7,6 @@ html {
   margin-top: 0 !important;
 }
 
-// Fix navbar alignment issues with other containers
-.creativecommons-certificate .navbar {
-  @include touch {
-    padding: $space-normal $space-small;
-  }
-  @include desktop {
-    padding: $space-large 0;
-  }
-}
-
 // Make sure page is always at least as tall as the user's screen (so don't see ugly whitespace below footer on short pages)
 // will fail gracefully on browsers without grid support :)
 .creativecommons-certificate {
@@ -149,4 +139,10 @@ main {
   br:last-child {
     display: none;
   }
+}
+
+// Fix last dropdown in header (has been fixed in most recent vocabulary, i believe)
+.navbar-end .menu-item-has-children:last-child .navbar-dropdown {
+  left: auto;
+  right: 0;
 }
