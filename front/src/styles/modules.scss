@@ -396,6 +396,8 @@
   }
 
   .testimonials-slider {
+    max-width: calc(100vw - #{$space-small * 4};
+
     .glide__slide,
     .glide__arrows {
       display: flex;

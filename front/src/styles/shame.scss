@@ -4,11 +4,11 @@
 
 // Make sure page is always at least as tall as the user's screen (so don't see ugly whitespace below footer on short pages)
 // will fail gracefully on browsers without grid support :)
-.creativecommons-certificate {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-}
+// .creativecommons-certificate {
+//   min-height: 100vh;
+//   display: grid;
+//   grid-template-rows: auto 1fr auto;
+// }
 
 span.icon {
   display: block;
@@ -67,6 +67,15 @@ span.icon {
   text-transform: none;
   font-family: "Source Sans Pro";
   font-weight: bold;
+}
+
+// Custom alumni button
+.button.alumni {
+  font-family: "Source Sans Pro";
+  text-transform: none;
+  padding: $space-small $space-normal;
+  color: $color-forest-green;
+  background-color: #e0f5e0;
 }
 
 // Custom Register Button
@@ -140,4 +149,22 @@ main {
 .navbar-end .menu-item-has-children:last-child .navbar-dropdown {
   left: auto;
   right: 0;
+}
+
+.fixed-card {
+  padding: $space-big $space-bigger;
+  border: 3px solid $color-light-gray;
+  background-color: $color-white;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: $space-normal;
+
+  .left {
+    margin-right: $space-large;
+
+    svg {
+      display: block;
+      margin-bottom: $space-normal;
+    }
+  }
 }

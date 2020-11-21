@@ -10,7 +10,7 @@
 	</header>
 	<div class="container">
 		<div class="columns margin-top-0 is-desktop">
-		<div class="column is-3 has-background-soft-gold course-sidebar">
+		<div class="column is-3-desktop has-background-soft-gold course-sidebar is-full">
 					<div class="entry-meta margin-top-xxl">
 						<?php
 							$course_duration = get_post_meta( get_the_ID(), 'course_duration', true );
