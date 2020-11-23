@@ -1,0 +1,40 @@
+{
+    "key": "group_5fbb731271706",
+    "title": "Registration Settings",
+    "fields": [
+        {
+            "key": "field_5fbb731991708",
+            "label": "Registration Link",
+            "name": "registration_link",
+            "type": "url",
+            "instructions": "Enter the default registration link. Can be overwritten per-course if necessary.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "https:\/\/my-registration-link.com\/register"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1606120299
+}

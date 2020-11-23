@@ -4,7 +4,7 @@
  */
 
 $featured_faq_titles = get_field( 'featured_faqs' );
-$faqs                = get_faqs_by_titles( $featured_faq_titles );
+$faqs                = Certificates_ACF::get_faqs_by_titles( $featured_faq_titles );
 ?>
 
 <div>

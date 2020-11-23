@@ -14,13 +14,13 @@
  */
 
   get_header();
-  $featured_posts = load_home_featured_posts();
+  $featured_posts = Certificates_ACF::load_home_featured_posts();
 ?>
 
 <main>
   <?php
 	// Hero Image and featured courses
-	require get_template_part( 'inc/partials/home', 'hero' );
+	include get_template_part( 'inc/partials/home', 'hero' );
 	?>
 
   <section class="has-background-grey-lighter padding-top-big padding-bottom-xl">
@@ -28,7 +28,7 @@
 
 	  <div class="columns is-variable is-6 padding-bottom-large">
 		<div class="column is-two-thirds">
-		  <?php require get_template_part( 'inc/partials/home', 'faq' ); ?>
+		  <?php include get_template_part( 'inc/partials/home', 'faq' ); ?>
 		</div>
 		<?php // Links Section (Hardcoded for now) ?>
 		<div class="column after-faq">

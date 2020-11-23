@@ -1,6 +1,9 @@
 <?php
 	get_header();
 	the_post();
+
+	// Use the local registration link, OR fallback to the global registration link
+	$registration_link = get_field('registration_link') ?: get_field('registration_link', 'options');
 ?>
 <section class="main-content">
 	<header class="single-header single-header--course">
@@ -37,7 +40,7 @@
 						}
 						?>
 
-						 <a href="" class="button register margin-top-bigger">Register Here</a>
+						 <a href="<?php echo $registration_link; ?>" class="button register margin-top-bigger">Register Here</a>
 					</div>
 				</div>
 			<div class="column is-9">

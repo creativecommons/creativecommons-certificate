@@ -20,6 +20,7 @@ require STYLESHEETPATH . '/inc/custom-post-types/queulat-cc-testimonials-cpt-plu
 
 /* Include local files */
 require STYLESHEETPATH . '/inc/certificates-functions.php';
+require STYLESHEETPATH . '/inc/acf.php';
 require STYLESHEETPATH . '/inc/widgets.php';
 
 /**
