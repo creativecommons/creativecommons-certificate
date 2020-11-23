@@ -13,14 +13,14 @@ define( 'THEME_PARENT_URI', get_template_directory_uri() );
 /*
 	Include Custom post types
 */
-require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-course-cpt-plugin/cc-course-cpt-plugin.php';
-require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-events-cpt-plugin/cc-events-cpt-plugin.php';
-require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-scholarships-cpt-plugin/cc-scholarships-cpt-plugin.php';
-require STYLESHEETPATH. '/inc/custom-post-types/queulat-cc-testimonials-cpt-plugin/cc-testimonials-cpt-plugin.php';
+require STYLESHEETPATH . '/inc/custom-post-types/queulat-cc-course-cpt-plugin/cc-course-cpt-plugin.php';
+require STYLESHEETPATH . '/inc/custom-post-types/queulat-cc-events-cpt-plugin/cc-events-cpt-plugin.php';
+require STYLESHEETPATH . '/inc/custom-post-types/queulat-cc-scholarships-cpt-plugin/cc-scholarships-cpt-plugin.php';
+require STYLESHEETPATH . '/inc/custom-post-types/queulat-cc-testimonials-cpt-plugin/cc-testimonials-cpt-plugin.php';
 
 /* Include local files */
-require STYLESHEETPATH. '/inc/certificates-functions.php';
-require STYLESHEETPATH. '/inc/widgets.php';
+require STYLESHEETPATH . '/inc/certificates-functions.php';
+require STYLESHEETPATH . '/inc/widgets.php';
 
 /**
  * Theme singleton class
@@ -28,6 +28,7 @@ require STYLESHEETPATH. '/inc/widgets.php';
  * Stores various theme and site specific info and groups custom methods
  **/
 class CC_Certificates_Site {
+
 	private static $instance;
 
 	const id        = __CLASS__;
@@ -62,7 +63,7 @@ class CC_Certificates_Site {
 		wp_enqueue_script( 'cc_certificates_script', THEME_LOCAL_URI . '/assets/js/script.js', array( 'jquery' ), self::theme_ver, true );
 	}
 	public function enqueue_styles() {
-		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/child-styles.css', array('cc_base_style'), self::theme_ver );
+		wp_enqueue_style( 'cc_current_style', THEME_LOCAL_URI . '/assets/css/child-styles.css', array( 'cc_base_style' ), self::theme_ver );
 	}
 }
 

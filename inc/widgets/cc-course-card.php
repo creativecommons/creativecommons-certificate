@@ -1,7 +1,10 @@
 <?php
 class WP_Widget_Course extends WP_Widget {
 
-	/** constructor */
+
+	/**
+	 * constructor
+	 */
 	function __construct() {
 		$widget_ops  = array(
 			'classname'   => 'cc-course',
@@ -57,7 +60,7 @@ class WP_Widget_Course extends WP_Widget {
 	}
 }
 function cc_course_card_widget_init() {
-	register_widget( 'WP_Widget_Course' );
+	 register_widget( 'WP_Widget_Course' );
 }
 
 add_action( 'widgets_init', 'cc_course_card_widget_init' );

@@ -24,31 +24,45 @@
 		<div class="columns">
 			<div class="column is-12">
 					<h2>Scholarship Recipients</h2>
-					<?php if( have_rows('scholarship_groups') ): while( have_rows('scholarship_groups') ) : the_row(); ?>
-						<?php
+					<?php
+					if ( have_rows( 'scholarship_groups' ) ) :
+						while ( have_rows( 'scholarship_groups' ) ) :
+							the_row();
+							?>
+							<?php
 							// Group subfields
-							$title = get_sub_field('title');
-							$recipients = get_sub_field('recipients');
-						?>
+							$title      = get_sub_field( 'title' );
+							$recipients = get_sub_field( 'recipients' );
+							?>
 						<h3 class="subtitle is-3 margin-bottom-large margin-top-bigger"><?php echo $title; ?></h3>
 						<div class="scholarship-recipients">
-							<?php if( have_rows('recipients') ): while( have_rows('recipients') ) : the_row(); ?>
-								<?php
+							<?php
+							if ( have_rows( 'recipients' ) ) :
+								while ( have_rows( 'recipients' ) ) :
+									the_row();
+									?>
+									<?php
 									// Recipient subfields
-									$name = get_sub_field('name');
-									$bio = get_sub_field('bio');
-									$image = get_sub_field('image');
+									$name  = get_sub_field( 'name' );
+									$bio   = get_sub_field( 'bio' );
+									$image = get_sub_field( 'image' );
 									?>
 								<div class="scholarship-recipient">
 									<h4 class="subtitle is-5 margin-bottom-big has-text-weight-bold"><?php echo $name; ?></h4>
 									<figure class="image is-5by3">
-										<?php echo wp_get_attachment_image($image, 'small'); ?>
+										<?php echo wp_get_attachment_image( $image, 'small' ); ?>
 									</figure>
 									<div><?php echo $bio; ?></div>
 								</div>
-							<?php endwhile; endif; ?>
+															<?php
+							endwhile;
+						endif;
+							?>
 						</div>
-					<?php endwhile; endif; ?>
+							<?php
+					endwhile;
+endif;
+					?>
 
 				</div>
 			</div>

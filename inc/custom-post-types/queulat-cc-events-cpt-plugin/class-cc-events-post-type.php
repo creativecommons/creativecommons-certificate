@@ -3,13 +3,14 @@
 use Queulat\Post_Type;
 
 class Cc_events_Post_Type extends Post_Type {
+
 	public function get_post_type() : string {
 		return 'cc_events';
 	}
 	public function get_post_type_args() : array {
-		return [
+		return array(
 			'label'                 => __( 'Events', 'cpt_cc_events' ),
-			'labels'                => [
+			'labels'                => array(
 				'name'                     => __( 'Events', 'cpt_cc_events' ),
 				'singular_name'            => __( 'Events', 'cpt_cc_events' ),
 				'add_new'                  => __( 'Add New', 'cpt_cc_events' ),
@@ -41,7 +42,7 @@ class Cc_events_Post_Type extends Post_Type {
 				'item_updated'             => __( 'Event updated.', 'cpt_cc_events' ),
 				'menu_name'                => __( 'Events', 'cpt_cc_events' ),
 				'name_admin_bar'           => __( 'Events', 'cpt_cc_events' ),
-			],
+			),
 			'description'           => __( '', 'cpt_cc_events' ),
 			'public'                => true,
 			'hierarchical'          => true,
@@ -53,32 +54,32 @@ class Cc_events_Post_Type extends Post_Type {
 			'show_in_admin_bar'     => true,
 			'menu_position'         => null,
 			'menu_icon'             => 'dashicons-calendar-alt',
-			'capability_type'       => [
+			'capability_type'       => array(
 				0 => 'ccgnevent',
 				1 => 'ccgnevents',
-			],
+			),
 			'map_meta_cap'          => true,
 			'register_meta_box_cb'  => null,
-			'taxonomies'            => [],
+			'taxonomies'            => array(),
 			'has_archive'           => true,
 			'query_var'             => 'cc_events',
 			'can_export'            => true,
 			'delete_with_user'      => true,
-			'rewrite'               => [
+			'rewrite'               => array(
 				'with_front' => true,
 				'feeds'      => true,
 				'pages'      => true,
 				'slug'       => 'events',
 				'ep_mask'    => 1,
-			],
-			'supports'              => [
+			),
+			'supports'              => array(
 				0 => 'title',
 				1 => 'editor',
 				2 => 'thumbnail',
-			],
+			),
 			'show_in_rest'          => true,
 			'rest_base'             => false,
 			'rest_controller_class' => false,
-		];
+		);
 	}
 }

@@ -20,24 +20,31 @@
 					</div>
 				</section>
 			</div>
-      <aside class="column is-4">
-        <div class="resources margin-top-xl">
-          <?php if( have_rows('resources') ): while( have_rows('resources') ) : the_row(); ?>
-            <?php
-              $link = get_sub_field('resource');
-              $link_url = $link['url'];
-              $link_title = $link['title'];
-              $link_target = $link['target'];
-            ?>
-            <a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>" class="resource is-block has-background-forest-green padding-vertical-bigger padding-horizontal-large has-text-white margin-bottom-normal">
-              <span class="has-text-semi-bold is-block">Resources</span>
-              <h3 class="title is-3 has-text-white"><?php echo $link_title; ?></h3>
-            </a>
+	  <aside class="column is-4">
+		<div class="resources margin-top-xl">
+		  <?php
+			if ( have_rows( 'resources' ) ) :
+				while ( have_rows( 'resources' ) ) :
+					the_row();
+					?>
+					<?php
+					$link        = get_sub_field( 'resource' );
+					$link_url    = $link['url'];
+					$link_title  = $link['title'];
+					$link_target = $link['target'];
+					?>
+			<a href="<?php echo $link_url; ?>" target="<?php echo $link_target; ?>" class="resource is-block has-background-forest-green padding-vertical-bigger padding-horizontal-large has-text-white margin-bottom-normal">
+			  <span class="has-text-semi-bold is-block">Resources</span>
+			  <h3 class="title is-3 has-text-white"><?php echo $link_title; ?></h3>
+			</a>
 
-          <?php endwhile; endif; ?>
+						  <?php
+			endwhile;
+		  endif;
+			?>
 
-        </div>
-      </aside>
+		</div>
+	  </aside>
 		</div>
 	</div>
 </section>

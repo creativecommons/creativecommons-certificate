@@ -9,9 +9,10 @@ use Queulat\Forms\Element\Select;
 
 class Event_Metabox extends Metabox {
 
+
 	public function __construct( $id = '', $title = '', $post_type = '', array $args = array() ) {
 		parent::__construct( $id, $title, $post_type, $args );
-		add_action( "{$this->get_id()}_metabox_data_updated", [ $this, 'data_updated' ], 10, 2 );
+		add_action( "{$this->get_id()}_metabox_data_updated", array( $this, 'data_updated' ), 10, 2 );
 	}
 	public function data_updated( $data, $post_id ) {
 		$dtstart = DateTime::createFromFormat( 'Y-m-d H:i', $data['dtstart_date'] . ' ' . $data['dtstart_time'] );
@@ -43,92 +44,92 @@ class Event_Metabox extends Metabox {
 		return $return_array;
 	}
 	public function get_fields(): array {
-		return [
+		return array(
 			Node_Factory::make(
 				Select::class,
-				[
+				array(
 					'name'       => 'related_course',
 					'label'      => 'Related courses',
-					'attributes' => [
+					'attributes' => array(
 						'class' => 'widefat',
-					],
-					'properties' => [
+					),
+					'properties' => array(
 						'description' => 'If this event is related to a course please select',
-					],
+					),
 					'options'    => $this->get_site_courses(),
-				]
+				)
 			),
 			Node_Factory::make(
 				Input_Text::class,
-				[
+				array(
 					'name'       => 'location',
 					'label'      => 'Location',
-					'attributes' => [
+					'attributes' => array(
 						'class'    => 'regular-text',
 						'required' => 'required',
-					],
-				]
+					),
+				)
 			),
 			Node_Factory::make(
 				Input_Text::class,
-				[
+				array(
 					'name'       => 'dtstart_date',
 					'label'      => 'Date',
-					'attributes' => [
+					'attributes' => array(
 						'class'    => 'regular-text',
 						'required' => 'required',
 						'type'     => 'date',
-					],
-				]
+					),
+				)
 			),
 			Node_Factory::make(
 				Input_Text::class,
-				[
+				array(
 					'name'       => 'dtstart_time',
 					'label'      => 'Start time',
-					'attributes' => [
+					'attributes' => array(
 						'class'    => 'regular-text',
 						'required' => 'required',
 						'type'     => 'time',
-					],
-				]
+					),
+				)
 			),
 			Node_Factory::make(
 				Input_Text::class,
-				[
+				array(
 					'name'       => 'dtend_time',
 					'label'      => 'End time',
-					'attributes' => [
+					'attributes' => array(
 						'class'    => 'regular-text',
 						'required' => 'required',
 						'type'     => 'time',
-					],
-				]
+					),
+				)
 			),
 			Node_Factory::make(
 				Input_Text::class,
-				[
+				array(
 					'name'       => 'signups',
 					'label'      => 'Signup Url',
-					'attributes' => [
+					'attributes' => array(
 						'class' => 'regular-text',
-					],
-				]
+					),
+				)
 			),
 			Node_Factory::make(
 				Input_Url::class,
-				[
+				array(
 					'name'       => 'url',
 					'label'      => 'Event Url',
-					'attributes' => [
+					'attributes' => array(
 						'class' => 'regular-text',
-					],
-				]
+					),
+				)
 			),
-		];
+		);
 	}
 	public function sanitize_data( array $data ): array {
-		$sanitized = [];
+		$sanitized = array();
 		foreach ( $data as $key => $val ) {
 			switch ( $key ) {
 				case 'location':
@@ -143,7 +144,7 @@ class Event_Metabox extends Metabox {
 					break;
 				case 'dtstart_time':
 				case 'dtend_time':
-					$time = DateTime::createFromFormat( 'Y-m-d H:i', date_i18n( 'Y-m-d' ) . ' ' . $val );
+					   $time = DateTime::createFromFormat( 'Y-m-d H:i', date_i18n( 'Y-m-d' ) . ' ' . $val );
 					if ( $time instanceof \DateTime ) {
 						$sanitized[ $key ] = $time->format( 'H:i' );
 					}
@@ -161,4 +162,4 @@ class Event_Metabox extends Metabox {
 	}
 }
 
-new Event_Metabox( 'event', 'Event Related Data', 'cc_events', [ 'context' => 'normal' ] );
+new Event_Metabox( 'event', 'Event Related Data', 'cc_events', array( 'context' => 'normal' ) );

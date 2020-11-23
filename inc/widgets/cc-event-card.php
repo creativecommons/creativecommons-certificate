@@ -1,7 +1,10 @@
 <?php
 class WP_Widget_Event extends WP_Widget {
 
-	/** constructor */
+
+	/**
+	 * constructor
+	 */
 	function __construct() {
 		$widget_ops  = array(
 			'classname'   => 'cc-event',

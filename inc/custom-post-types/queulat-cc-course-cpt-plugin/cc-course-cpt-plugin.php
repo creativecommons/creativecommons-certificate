@@ -10,11 +10,11 @@
  */
 
 function Cc_Course_Post_Type_register_post_type() {
-	require_once __DIR__ . '/class-cc-course-post-type.php';
+	 include_once __DIR__ . '/class-cc-course-post-type.php';
 	Cc_Course_Post_Type::activate_plugin();
-	require_once __DIR__ . '/class-cc-course-post-type.php';
-	require_once __DIR__ . '/class-cc-course-post-query.php';
-	require_once __DIR__ . '/class-cc-course-post-object.php';
+	include_once __DIR__ . '/class-cc-course-post-type.php';
+	include_once __DIR__ . '/class-cc-course-post-query.php';
+	include_once __DIR__ . '/class-cc-course-post-object.php';
 	// require_once __DIR__ . '/class-cc-course-metabox.php';
 }
 

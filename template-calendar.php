@@ -18,7 +18,7 @@
 					<div class="text-format content body-big">
 						<?php the_content(); ?>
 
-            <h2>Upcoming Courses</h2>
+			<h2>Upcoming Courses</h2>
 					</div>
 				</section>
 			</div>

@@ -3,13 +3,14 @@
 use Queulat\Post_Type;
 
 class Cc_Scholarships_Post_Type extends Post_Type {
+
 	public function get_post_type() : string {
 		return 'cc_scholarships';
 	}
 	public function get_post_type_args() : array {
-		return [
+		return array(
 			'label'                 => __( 'Scholarships', 'cpt_cc_scholarships' ),
-			'labels'                => [
+			'labels'                => array(
 				'name'                     => __( 'Scholarships', 'cpt_cc_scholarships' ),
 				'singular_name'            => __( 'Scholarships', 'cpt_cc_scholarships' ),
 				'add_new'                  => __( 'Add New', 'cpt_cc_scholarships' ),
@@ -41,7 +42,7 @@ class Cc_Scholarships_Post_Type extends Post_Type {
 				'item_updated'             => __( 'Page updated.', 'cpt_cc_scholarships' ),
 				'menu_name'                => __( 'Scholarships', 'cpt_cc_scholarships' ),
 				'name_admin_bar'           => __( 'Scholarships', 'cpt_cc_scholarships' ),
-			],
+			),
 			'description'           => __( '', 'cpt_cc_scholarships' ),
 			'public'                => true,
 			'hierarchical'          => true,
@@ -53,32 +54,32 @@ class Cc_Scholarships_Post_Type extends Post_Type {
 			'show_in_admin_bar'     => true,
 			'menu_position'         => null,
 			'menu_icon'             => 'dashicons-awards',
-			'capability_type'       => [
+			'capability_type'       => array(
 				0 => 'cc_scholarship',
 				1 => 'cc_scholarships',
-			],
+			),
 			'map_meta_cap'          => true,
 			'register_meta_box_cb'  => null,
-			'taxonomies'            => [],
+			'taxonomies'            => array(),
 			'has_archive'           => true,
 			'query_var'             => 'cc_scholarships',
 			'can_export'            => true,
 			'delete_with_user'      => true,
-			'rewrite'               => [
+			'rewrite'               => array(
 				'with_front' => true,
 				'feeds'      => true,
 				'pages'      => true,
 				'slug'       => 'cc_scholarships',
 				'ep_mask'    => 1,
-			],
-			'supports'              => [
+			),
+			'supports'              => array(
 				0 => 'title',
 				1 => 'editor',
 				2 => 'thumbnail',
-			],
+			),
 			'show_in_rest'          => true,
 			'rest_base'             => false,
 			'rest_controller_class' => false,
-		];
+		);
 	}
 }
