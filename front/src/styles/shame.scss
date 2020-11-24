@@ -162,6 +162,10 @@ main {
   .left {
     margin-right: $space-large;
 
+    * {
+      white-space: nowrap; // prevent month+date lines from wrapping
+    }
+
     svg {
       display: block;
       margin-bottom: $space-normal;

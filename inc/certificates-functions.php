@@ -137,16 +137,16 @@ function load_org_blog_posts() {
  * A custom function that calculates how many weeks occur
  * between two given dates.
  *
- * @param string $dateOne Y-m-d format.
- * @param string $dateTwo Y-m-d format.
+ * @param string $date_one Y-m-d format.
+ * @param string $date_two Y-m-d format.
  * @return int
  */
-function numWeeks( $dateOne, $dateTwo ) {
-	$firstDate      = new DateTime( $dateOne );
-		$secondDate = new DateTime( $dateTwo );
+function numWeeks( $date_one, $date_two ) {
+	$first_date  = new DateTime( $date_one );
+	$secnd_date = new DateTime( $date_two );
 
-		$differenceInDays  = $firstDate->diff( $secondDate )->days;
-		$differenceInWeeks = $differenceInDays / 7;
+	$difference_in_days  = $first_date->diff( $secnd_date )->days;
+	$difference_in_weeks = $difference_in_days / 7;
 
-	return floor( $differenceInWeeks );
+	return floor( $difference_in_weeks );
 }
