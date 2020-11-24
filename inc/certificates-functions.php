@@ -13,27 +13,29 @@ class Certificates_Website {
 	}
 	public static function modify_breadcrumb_seperator() {
 		return '<i class="icon chevron-right is-6"></i>';
-}
+	}
 	public static function get_upcoming_course_events( $post_id ) {
-		$posts = get_posts( array(
-			'posts_per_page'	=> -1,
-			'post_type'			  => 'cc_events',
-			'meta_key'        => 'start_date',
-	    'orderby'         => 'meta_value_num',
-			'order'     => 'ASC',
-			'meta_query' => array(
-				array(
-					'key' => 'related_course',
-					'compare' => '=',
-					'value' => $post_id
-				),
-				array(
-					'key' => 'start_date',
-					'compare' => '>=',
-					'value' => date('Ymd')
+		$posts = get_posts(
+			array(
+				'posts_per_page' => -1,
+				'post_type'      => 'cc_events',
+				'meta_key'       => 'start_date',
+				'orderby'        => 'meta_value_num',
+				'order'          => 'ASC',
+				'meta_query'     => array(
+					array(
+						'key'     => 'related_course',
+						'compare' => '=',
+						'value'   => $post_id,
+					),
+					array(
+						'key'     => 'start_date',
+						'compare' => '>=',
+						'value'   => date( 'Ymd' ),
+					),
 				),
 			)
-		) );
+		);
 
 		return $posts;
 	}
@@ -139,12 +141,12 @@ function load_org_blog_posts() {
  * @param string $dateTwo Y-m-d format.
  * @return int
  */
-function numWeeks($dateOne, $dateTwo){
-    $firstDate = new DateTime($dateOne);
-		$secondDate = new DateTime($dateTwo);
+function numWeeks( $dateOne, $dateTwo ) {
+	$firstDate      = new DateTime( $dateOne );
+		$secondDate = new DateTime( $dateTwo );
 
-		$differenceInDays = $firstDate->diff($secondDate)->days;
+		$differenceInDays  = $firstDate->diff( $secondDate )->days;
 		$differenceInWeeks = $differenceInDays / 7;
 
-    return floor($differenceInWeeks);
+	return floor( $differenceInWeeks );
 }
