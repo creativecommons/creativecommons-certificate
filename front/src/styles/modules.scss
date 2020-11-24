@@ -417,7 +417,7 @@
   }
 
   .testimonials-slider {
-    max-width: calc(100vw - #{$space-small * 4};
+    max-width: calc(100vw - #{$space-small * 4});
 
     .glide__slide,
     .glide__arrows {
@@ -461,6 +461,19 @@
       margin-left: 168px;
       margin-top: $space-big;
       padding-left: $space-big;
+    }
+
+    blockquote * {
+      font-style: normal !important;
+      line-height: 32px;
+      display: block;
+    }
+
+    cite {
+      font-weight: 600;
+      display: block;
+      font-size: $font-size-body-normal;
+      margin-top: $space-normal;
     }
   }
 

@@ -1,0 +1,65 @@
+{
+    "key": "group_5fbc6bc39e701",
+    "title": "Featured Testimonials",
+    "fields": [
+        {
+            "key": "field_5fbc6bc90751b",
+            "label": "Featured Testimonials",
+            "name": "featured_testimonials",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Robert Farrow, 2019": "Robert Farrow, 2019",
+                "Todd Raschen Lim, 2019": "Todd Raschen Lim, 2019",
+                "Bali Maha, 2019": "Bali Maha, 2019",
+                "Mohamad Mostafa, 2019": "Mohamad Mostafa, 2019",
+                "Julio Zetter Patiño, 2019": "Julio Zetter Patiño, 2019",
+                "Alison Mead Richardson, 2019 ": "Alison Mead Richardson, 2019 ",
+                "Katya Henry, 2019 ": "Katya Henry, 2019 ",
+                "Brian Ssennoga, 2019": "Brian Ssennoga, 2019",
+                "Jennifer Collins, Summer, 2019": "Jennifer Collins, Summer, 2019",
+                "Cindy Gruwell, 2019": "Cindy Gruwell, 2019",
+                "Paul West, 2019": "Paul West, 2019",
+                "Robert Gibson, 2019": "Robert Gibson, 2019",
+                "Merinda McLure, 2019": "Merinda McLure, 2019",
+                "Susan Tsiouris, 2019": "Susan Tsiouris, 2019",
+                "Walter Butler, 2019": "Walter Butler, 2019",
+                "Dawn (Nikki) Cannon-Rech, 2019": "Dawn (Nikki) Cannon-Rech, 2019",
+                "Anonymous, 2019": "Anonymous, 2019",
+                "Elizabeth Batte, 2019": "Elizabeth Batte, 2019"
+            },
+            "default_value": [],
+            "allow_null": 0,
+            "multiple": 1,
+            "ui": 1,
+            "ajax": 0,
+            "return_format": "value",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "page-home.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "modified": 1606183909
+}

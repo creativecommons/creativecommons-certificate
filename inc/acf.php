@@ -49,6 +49,22 @@ class Certificates_ACF {
 	}
 
 	/**
+	 * Populate the 'Featured Testimonials' slider on the homepage edit page with the actual Testimonials.
+	 */
+	public static function acf_load_featured_testimonials( $field ) {
+		$field['choices'] = array();
+
+		// @todo: Testimonials page id is hardcoded here, find a way to make this dynamic
+		$testimonials = get_field( 'testimonials', 16 );
+
+		foreach ( $testimonials as $testimonial ) {
+			$field['choices'][ $testimonial['citation'] ] = $testimonial['citation'];
+		}
+
+		return $field;
+	}
+
+	/**
 	 * Retrieve the list of featured FAQs from a list of FAQ titles.
 	 * Basically, FAQ string titles are being treated as a unique ID for retrieval.
 	 **/
@@ -66,6 +82,24 @@ class Certificates_ACF {
 		}
 
 		return $filtered_faqs;
+	}
+
+	/**
+	 * Retrieve the list of featured testimonials from a list of testimonial citations.
+	 * Basically, FAQ string titles are being treated as a unique ID for retrieval.
+	 **/
+	public static function get_testimonials_by_cite( $citations = array() ) {
+		// @todo: FAQ page id is hardcoded here, find a way to make this dynamic
+		$testimonials    = get_field( 'testimonials', 16 );
+		$filtered_testimonials = array();
+
+		foreach ( $testimonials as $testimonial ) {
+			if ( in_array( $testimonial['citation'], $citations ) ) {
+				array_push( $filtered_testimonials, $testimonial );
+			}
+		}
+
+		return $filtered_testimonials;
 	}
 
 
@@ -124,3 +158,4 @@ class Certificates_ACF {
 add_action( 'acf/init', array( 'Certificates_ACF', 'init' ) );
 add_filter( 'acf/load_field/name=blog_posts', array( 'Certificates_ACF', 'acf_load_blog_posts' ) );
 add_filter( 'acf/load_field/name=featured_faqs', array( 'Certificates_ACF', 'acf_load_featured_faq_choices' ) );
+add_filter( 'acf/load_field/name=featured_testimonials', array( 'Certificates_ACF', 'acf_load_featured_testimonials' ) );
