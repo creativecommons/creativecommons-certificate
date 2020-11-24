@@ -2,6 +2,8 @@
   /*Template Name: Calendar Page */
 	get_header();
 	the_post();
+
+	$upcoming_courses = Certificates_Website::get_upcoming_course_events();
 ?>
 <section class="main-content">
 
@@ -18,7 +20,16 @@
 					<div class="text-format content body-big">
 						<?php the_content(); ?>
 
-			<h2>Upcoming Courses</h2>
+						<h2>Upcoming Courses</h2>
+
+						<ul class="margin-top-bigger course-list">
+						<?php foreach ( $upcoming_courses as $course ) : ?>
+							<li>
+								<?php echo Certificates_Website::event_card( $course->ID ); ?>
+							</li>
+						<?php endforeach; ?>
+						</ul>
+
 					</div>
 				</section>
 			</div>

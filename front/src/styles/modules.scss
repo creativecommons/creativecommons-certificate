@@ -122,6 +122,10 @@
 
   // Overrides for the homepage hero
   .home-hero {
+    a {
+      font-weight: 600;
+    }
+
     color: $color-black;
     background-color: $color-primary;
     position: relative;
@@ -535,6 +539,15 @@
         justify-content: space-between;
       }
       flex: 1;
+    }
+  }
+
+  .course-list {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      margin-bottom: $space-normal;
     }
   }
 }

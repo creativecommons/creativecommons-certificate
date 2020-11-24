@@ -171,10 +171,37 @@ main {
       margin-bottom: $space-normal;
     }
   }
+
+  @include mobile() {
+    display: flex;
+    flex-direction: column;
+
+    svg + .title {
+      margin-left: $space-normal;
+    }
+    .title + .title:before {
+      content: "—";
+      margin-left: 1ch;
+      margin-right: 1ch;
+    }
+    .left {
+      display: flex;
+      margin-bottom: $space-normal;
+    }
+  }
 }
 .fixed-card.fixed-card--simple {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+
+.subtitle {
+  font-weight: bold !important;
+}
+
+a[href="#"] {
+  pointer-events: none;
+  cursor: default;
 }
