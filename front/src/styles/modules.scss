@@ -307,6 +307,16 @@
 
   // Course template
   &.single-cc_course {
+    .course-meta {
+      display: flex;
+      column-gap: $space-normal;
+      margin-top: $space-big;
+
+      li {
+        margin-bottom: $space-small;
+      }
+    }
+
     .single-header--course {
       padding-top: 0;
       background-color: $grey-lighter !important;

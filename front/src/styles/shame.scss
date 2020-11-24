@@ -168,3 +168,9 @@ main {
     }
   }
 }
+.fixed-card.fixed-card--simple {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

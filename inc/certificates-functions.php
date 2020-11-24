@@ -13,10 +13,44 @@ class Certificates_Website {
 	}
 	public static function modify_breadcrumb_seperator() {
 		return '<i class="icon chevron-right is-6"></i>';
+}
+	public static function get_upcoming_course_events( $post_id ) {
+		$posts = get_posts( array(
+			'posts_per_page'	=> -1,
+			'post_type'			  => 'cc_events',
+			'meta_key'        => 'start_date',
+	    'orderby'         => 'meta_value_num',
+			'order'     => 'ASC',
+			'meta_query' => array(
+				array(
+					'key' => 'related_course',
+					'compare' => '=',
+					'value' => $post_id
+				),
+				array(
+					'key' => 'start_date',
+					'compare' => '>=',
+					'value' => date('Ymd')
+				),
+			)
+		) );
+
+		return $posts;
 	}
-	public static function get_upcoming_course_events() {
-		return array( 'wow' );
+
+	public static function get_upcoming_course_meta( $events ) {
+		$upcoming_id = $events[0]->ID;
+		$start       = get_field( 'start_date', $upcoming_id );
+		$end         = get_field( 'end_date', $upcoming_id );
+
+		return array(
+			'start_date' => $start,
+			'end_date'   => $end,
+			'duration'   => numWeeks( $start, $end ),
+			'language'   => get_field( 'language', $upcoming_id ),
+		);
 	}
+
 	public static function register_columns_shortcode( $atts, $content ) {
 		$a = shortcode_atts( array( 'cols' => '4' ), $atts );
 		return '<div class="cols" style="--col-count: ' . $a['cols'] . ';">' . $content . '</div>';
@@ -94,4 +128,23 @@ function load_org_blog_posts() {
 	}
 
 	return $posts;
+}
+
+
+/*
+ * A custom function that calculates how many weeks occur
+ * between two given dates.
+ *
+ * @param string $dateOne Y-m-d format.
+ * @param string $dateTwo Y-m-d format.
+ * @return int
+ */
+function numWeeks($dateOne, $dateTwo){
+    $firstDate = new DateTime($dateOne);
+		$secondDate = new DateTime($dateTwo);
+
+		$differenceInDays = $firstDate->diff($secondDate)->days;
+		$differenceInWeeks = $differenceInDays / 7;
+
+    return floor($differenceInWeeks);
 }
