@@ -50,9 +50,3 @@ Add the following to your `composer.json` file:
 2. In your admin panel, go to Appearance -> Themes and click the 'Add New' button.
 3. Click on 'Upload Theme', select the zip file, and click on 'Install Now'.
 4. Click on the 'Activate' button to use your new theme right away.
-
-## Manual Deployment
-
-1. Export local DB with url rename `wp search-replace 'certs-backup.test' 'tempcert.creativecommons.org' --export=certs.sql`
-2. Zip uploads directory `zip uploads.zip uploads -r`
-3. Upload `.zip` to production server
