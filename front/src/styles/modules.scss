@@ -456,11 +456,21 @@
     .testimonial-slider-controls {
       font-weight: 600;
       display: flex;
-      justify-content: space-between;
+      flex-direction: column;
       align-items: center;
-      margin-left: 168px;
-      margin-top: $space-big;
-      padding-left: $space-big;
+      margin-top: $space-normal;
+      row-gap: $space-normal;
+
+      @include tablet() {
+        justify-content: space-between;
+        align-items: center;
+        margin-top: $space-big;
+        padding-left: $space-big;
+      }
+
+      @include desktop() {
+        margin-left: 168px;
+      }
     }
 
     blockquote * {
