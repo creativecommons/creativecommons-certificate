@@ -309,6 +309,42 @@
     }
   }
 
+  // Alumni
+  .alumni-header,
+  .alumni-members {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .alumni-members-wrapper .alumni-member {
+    width: 120px;
+    flex-shrink: 0;
+    margin-left: $space-large / 2;
+    margin-right: $space-large / 2;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .alumni-member {
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      border-radius: 50%;
+      border: 3px solid black;
+    }
+  }
+
   // Course template
   &.single-cc_course {
     .course-meta {

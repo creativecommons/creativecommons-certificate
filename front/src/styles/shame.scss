@@ -85,6 +85,15 @@ span.icon {
   border-color: $color-forest-green;
 }
 
+// Custom Slack Button
+.button.slack {
+  padding: $space-normal $space-big;
+  background-color: $color-white;
+  border-color: $color-light-gray;
+  color: $color-dark-slate-gray;
+  text-transform: none;
+}
+
 // Remove unneeded logo margin (comes from vocabulary)
 .navbar-brand {
   margin-left: 0 !important;

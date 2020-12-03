@@ -4,7 +4,7 @@
 
 	// Use the local registration link, OR fallback to the global registration link
 	$no_upcoming       = false;
-	$events 					 = Certificates_Website::get_upcoming_course_events( get_the_ID() );;
+	$events 					 = Certificates_Website::get_upcoming_course_events( get_the_ID() );
 	$upcoming_meta     = count($events) > 0 ? Certificates_Website::get_upcoming_course_meta ( $events ) : [];
 
 	if ( ! empty ($upcoming_meta) ) {
