@@ -11,7 +11,7 @@ jQuery(document).ready(function ($) {
   // Homepage slider
   var sliderClass = ".testimonials-slider";
   if ($(sliderClass).length > 0) {
-    new Glide(sliderClass).mount({ autoplay: true });
+    new Glide(sliderClass).mount();
   }
 
   // Accordions
