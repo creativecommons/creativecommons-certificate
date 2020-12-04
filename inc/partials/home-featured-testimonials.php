@@ -6,7 +6,7 @@
   $testimonials                = Certificates_ACF::get_testimonials_by_cite( $featured_testimonial_citations );
 ?>
 
-<div class="glide testimonials-slider">
+<div class="testimonials-slider">
   <div class="glide__track" data-glide-el="track">
     <ul class="glide__slides">
       <?php foreach ( $testimonials as $testimonial ) : ?>
@@ -49,7 +49,7 @@
       </button>
 
       <div class="glide__bullets" data-glide-el="controls[nav]">
-        <?php for ( $i = 0; $i <= count($testimonials); $i++ ) { ?>
+        <?php for ( $i = 0; $i < count($testimonials); $i++ ) { ?>
           <button class="glide__bullet" data-glide-dir="=<?php echo $i; ?>"></button>
         <?php } ?>
       </div>

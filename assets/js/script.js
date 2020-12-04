@@ -8,6 +8,12 @@ function togggleHiddenAttr(el, attr) {
 }
 
 jQuery(document).ready(function ($) {
+  // Homepage slider
+  var sliderClass = ".testimonials-slider";
+  if ($(sliderClass).length > 0) {
+    new Glide(sliderClass).mount({ autoplay: true });
+  }
+
   // Accordions
   // accordionHeader.click(() => accordionBody where labelledby = accordionHeader.id remove hide)
   $(".accordion-header").click(function (event) {
