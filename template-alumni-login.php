@@ -19,7 +19,7 @@
 						<?php the_content(); ?>
 
 						<div class="alumni-login has-background-grey-lighter padding-vertical-bigger padding-horizontal-large">
-							<?php wp_login_form(); ?>
+							<?php wp_login_form( array ( 'redirect' => get_permalink( CC_Alumni::$alumni_home_id ) ) ); ?>
 						</div>
 					</div>
 				</section>

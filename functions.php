@@ -17,6 +17,7 @@ require STYLESHEETPATH . '/inc/custom-post-types/queulat-cc-course-cpt-plugin/cc
 require STYLESHEETPATH . '/inc/custom-post-types/queulat-cc-events-cpt-plugin/cc-events-cpt-plugin.php';
 
 /* Include local files */
+require STYLESHEETPATH . '/inc/alumni.php';
 require STYLESHEETPATH . '/inc/certificates-functions.php';
 require STYLESHEETPATH . '/inc/acf.php';
 require STYLESHEETPATH . '/inc/widgets.php';
