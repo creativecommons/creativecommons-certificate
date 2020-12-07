@@ -76,6 +76,23 @@ span.icon {
   padding: $space-small $space-normal;
   color: $color-forest-green;
   background-color: #e0f5e0;
+
+  // dropown variation
+  &.is-dropdown {
+    color: $color-dark-gray;
+    background-color: transparent;
+    border: 2px solid #d8d8d8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .caret-down {
+      width: 8px;
+      height: 19px;
+      margin-left: 12px !important;
+      color: black;
+    }
+  }
 }
 
 // Custom Register Button

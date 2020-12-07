@@ -1,4 +1,5 @@
 <?php
+
 class Certificates_Website {
 	/*
 	 * Render a simple card for an event
@@ -118,12 +119,16 @@ class Certificates_Website {
 		}
 	}
 	public static function add_alumni_login_button( $items, $args ) {
+		global $alumni;
+
 		if ( $args->theme_location == 'main-navigation' ) {
-			$items .= CC_Alumni::show_alumni_menu_item();
+			$items .= $alumni->show_alumni_menu_item();
 		}
 		return $items;
 	}
 };
+
+// @todo: Move filter registration into class method.
 
 // add filters
 add_filter( 'cc_theme_base_set_default_size_logo', array( 'Certificates_Website', 'set_certificates_logo_image_size' ) );
