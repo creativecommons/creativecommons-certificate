@@ -26,52 +26,11 @@
 			<div class="alumni-header margin-bottom-bigger">
 				<h2>Members</h2>
 				<a class="title is-5 has-text-forest-green" href="/members">
-					See all {{count}} Members
+					See all <?php echo count($alumni->alumni); ?> Members
 				</a>
 			</div>
 			<div class="alumni-members-wrapper">
-			<div class="alumni-members">
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-				<a href="<?php echo bbp_get_user_profile_url( $user_id ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="https://placekitten.com/120/120" alt="Kitten">
-					<span class="has-text-weight-bold">Bessie Cooper</span>
-				</a>
-			</div>
+				<?php $alumni->render_alumni(); ?>
 			</div>
 		</div>
 	</section>

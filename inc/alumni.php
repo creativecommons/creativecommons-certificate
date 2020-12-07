@@ -7,10 +7,12 @@
 
   public $alumni_home_id;
   public $alumni_login_id;
+  public $alumni;
 
   function __construct() {
     $this->alumni_home_id = get_field( 'alumni_home_page', 'options' );
     $this->alumni_login_id = get_field( 'alumni_login_page', 'options' );
+    $this->alumni = $this->get_alumni();
     $this->actions_manager();
   }
 
@@ -21,6 +23,30 @@
 		}
 		return self::$instance;
 	}
+
+  public static function get_alumni() {
+    $key = 'cc_alumni';
+
+    if ( false === ( $results = get_transient( $key ) ) ) {
+      $results = get_users( array ( 'role__in' => array ( 'bbp_participant' ), 'fields' => array ( 'ID', 'user_email', 'display_name' ) ) );
+      set_transient( $key, $results, HOUR_IN_SECONDS / 4 );
+    }
+
+    return $results;
+  }
+
+  public function render_alumni() {
+    ?>
+    <div class="alumni-members">
+      <?php foreach ($this->alumni as $single_alumni) { ?>
+				<a href="<?php echo bbp_get_user_profile_url( $single_alumni->ID ); ?>" class="alumni-member">
+					<img class="margin-bottom-small" src="<?php echo get_avatar_url( $single_alumni->ID ); ?>" alt="Kitten">
+					<span class="has-text-weight-bold"><?php echo $single_alumni->display_name; ?></span>
+				</a>
+      <?php } ?>
+    </div>
+    <?php
+  }
 
   /**
    * Display a notice in the WordPress back-end if the alumni pages aren't linked correctly.
