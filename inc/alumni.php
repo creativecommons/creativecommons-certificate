@@ -40,7 +40,7 @@
     <div class="alumni-members">
       <?php foreach ($this->alumni as $single_alumni) { ?>
 				<a href="<?php echo bbp_get_user_profile_url( $single_alumni->ID ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="<?php echo get_avatar_url( $single_alumni->ID ); ?>" alt="Kitten">
+					<img class="margin-bottom-small" src="<?php echo get_avatar_url( $single_alumni->ID, array ( 'size' => 120 ) ); ?>" alt="Kitten">
 					<span class="has-text-weight-bold"><?php echo $single_alumni->display_name; ?></span>
 				</a>
       <?php } ?>
