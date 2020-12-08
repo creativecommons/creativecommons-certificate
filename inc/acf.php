@@ -90,7 +90,7 @@ class Certificates_ACF {
 	 **/
 	public static function get_testimonials_by_cite( $citations = array() ) {
 		// @todo: FAQ page id is hardcoded here, find a way to make this dynamic
-		$testimonials    = get_field( 'testimonials', 16 );
+		$testimonials          = get_field( 'testimonials', 16 );
 		$filtered_testimonials = array();
 
 		foreach ( $testimonials as $testimonial ) {

@@ -20,8 +20,8 @@ class Certificates_Website {
 							</clipPath>
 						</defs>
 					</svg>
-					<span class="title is-5"><?php echo get_field('start_date', $post_id ); ?></span>
-					<span class="title is-5"><?php echo get_field('end_date', $post_id ); ?></span>
+					<span class="title is-5"><?php echo get_field( 'start_date', $post_id ); ?></span>
+					<span class="title is-5"><?php echo get_field( 'end_date', $post_id ); ?></span>
 				</div>
 				<div class="right">
 					<h3 class="subtitle is-5 margin-bottom-normal"><?php echo get_the_title( $post_id ); ?></h3>
@@ -51,7 +51,7 @@ class Certificates_Website {
 				'key'     => 'start_date',
 				'compare' => '>=',
 				'value'   => date( 'Ymd' ),
-			)
+			),
 		);
 
 		// Filter by course ff we're getting events related to a specific course.
@@ -70,7 +70,7 @@ class Certificates_Website {
 				'meta_key'       => 'start_date',
 				'orderby'        => 'meta_value_num',
 				'order'          => 'ASC',
-				'meta_query'     => $meta_query
+				'meta_query'     => $meta_query,
 			)
 		);
 
@@ -180,7 +180,7 @@ function load_org_blog_posts() {
  * @return int
  */
 function numWeeks( $date_one, $date_two ) {
-	$first_date  = new DateTime( $date_one );
+	$first_date = new DateTime( $date_one );
 	$secnd_date = new DateTime( $date_two );
 
 	$difference_in_days  = $first_date->diff( $secnd_date )->days;

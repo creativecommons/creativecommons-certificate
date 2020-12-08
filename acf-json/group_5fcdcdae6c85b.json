@@ -21,7 +21,7 @@
         },
         {
             "key": "field_5fcdce02342c4",
-            "label": "Alumni Home Page",
+            "label": "Home Page",
             "name": "alumni_home_page",
             "type": "post_object",
             "instructions": "",
@@ -43,7 +43,7 @@
         },
         {
             "key": "field_5fcdd19e342c5",
-            "label": "Alumni Login Page",
+            "label": "Login Page",
             "name": "alumni_login_page",
             "type": "post_object",
             "instructions": "",
@@ -61,6 +61,48 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_5fcdeaf252853",
+            "label": "Members Page",
+            "name": "alumni_members_page",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": "",
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
+            "ui": 1
+        },
+        {
+            "key": "field_5fcdf22240823",
+            "label": "Forum",
+            "name": "alumni_forum_page",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "forum"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "object",
             "ui": 1
         }
     ],
@@ -81,5 +123,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1607324834
+    "modified": 1607332442
 }

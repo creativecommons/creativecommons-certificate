@@ -2,8 +2,8 @@
   /*Template Name: Alumni Home Page */
 	get_header();
 	the_post();
-	$user_id = 960;
-	$upcoming_courses = Certificates_Website::get_upcoming_course_events( );
+	$user_id          = 960;
+	$upcoming_courses = Certificates_Website::get_upcoming_course_events();
 ?>
 <section class="main-content has-background-grey-lighter">
 
@@ -25,8 +25,8 @@
 		<div class="container">
 			<div class="alumni-header margin-bottom-bigger">
 				<h2>Members</h2>
-				<a class="title is-5 has-text-forest-green" href="/members">
-					See all <?php echo count($alumni->alumni); ?> Members
+				<a class="title is-5 has-text-forest-green" href="<?php echo get_permalink( $alumni->members_page_id ); ?>">
+					See all <?php echo count( $alumni->alumni ); ?> Members
 				</a>
 			</div>
 			<div class="alumni-members-wrapper">
@@ -39,7 +39,7 @@
 	<div class="container">
 		<div class="alumni-header margin-bottom-bigger">
 			<h2>Forum Activity</h2>
-			<a class="title is-5 has-text-forest-green" href="/alumni/forum">
+			<a class="title is-5 has-text-forest-green" href="<?php echo get_permalink( $alumni->forum_page_id ); ?>">
 				See all announcements
 			</a>
 		</div>
