@@ -54,8 +54,12 @@ span.icon {
 // Override HR color on grey bg
 .has-background-grey-lighter {
   hr {
-    margin: $space-bigger 0;
     background-color: $color-light-gray;
+    margin: $space-big 0;
+
+    @include desktop() {
+      margin: $space-bigger 0;
+    }
   }
 }
 
