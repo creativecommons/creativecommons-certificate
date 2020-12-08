@@ -28,6 +28,9 @@
 		?>
 		<div class="container">
 			<?php get_template_part( 'inc/partials/entry/course', 'header' ); ?>
+			<?php if ( get_field( 'featured_image_attribution' ) ) { ?>
+				<div class="attribution attribution--right"><?php echo get_field( 'featured_image_attribution' ); ?></div>
+			<?php } ?>
 		</div>
 	</header>
 	<div class="container">
