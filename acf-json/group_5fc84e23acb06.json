@@ -1,6 +1,6 @@
 {
     "key": "group_5fc84e23acb06",
-    "title": "Alumni User Fields",
+    "title": "Course Information",
     "fields": [
         {
             "key": "field_5fc84e4b1b93a",
@@ -58,5 +58,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1606962781
+    "modified": 1607407191
 }

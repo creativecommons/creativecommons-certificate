@@ -24,9 +24,11 @@ class Certificates_Website {
 					<span class="title is-5"><?php echo get_field( 'end_date', $post_id ); ?></span>
 				</div>
 				<div class="right">
-					<h3 class="subtitle is-5 margin-bottom-normal"><?php echo get_the_title( $post_id ); ?></h3>
+					<a href="<?php echo get_permalink( get_field( 'related_course', $post_id ) ); ?>">
+						<h3 class="subtitle is-5 margin-bottom-normal"><?php echo get_the_title( $post_id ); ?></h3>
+					</a>
 					<?php echo get_the_excerpt( $post_id ); ?>
-					<a href=<?php echo get_permalink( get_field( 'related_course', $post_id ) ); ?> class="is-block has-text-weight-semibold margin-top-normal">see course details</a>
+					<a href="<?php echo get_permalink( get_field( 'related_course', $post_id ) ); ?>"" class="is-block has-text-weight-semibold margin-top-normal">see course details</a>
 				</div>
 			</div>
 		<?php

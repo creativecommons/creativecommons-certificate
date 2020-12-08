@@ -44,7 +44,7 @@
 				See all announcements
 			</a>
 		</div>
-		<ul>
+		<ul class="forum-posts">
 			<?php foreach ( $forum_latest_posts as $forum_post ) { ?>
 				<li>
 					<?php echo CC_Alumni::forum_card( $forum_post->ID ); ?>

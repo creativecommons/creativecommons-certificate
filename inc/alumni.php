@@ -42,7 +42,7 @@ class CC_Alumni {
 	public static function forum_card( $post_id ) {
 		$author_id = get_post_field( 'post_author', $post_id );
 		?>
-		<article class="fixed-card">
+		<article class="fixed-card fixed-card--stacked">
 			<header>
 				<a href="<?php echo get_the_permalink( $post_id ); ?>">
 					<h3 class="subtitle is-5"><?php echo get_the_title( $post_id ) ?></h3>
@@ -62,7 +62,7 @@ class CC_Alumni {
 	}
 
 	public static function get_alumni() {
-		$key = 'cc_alumni_';
+		$key = 'cc_alumni';
 
 		if ( false === ( $results = get_transient( $key ) ) ) {
 			$results = get_users(
