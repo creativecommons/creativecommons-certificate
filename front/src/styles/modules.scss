@@ -579,4 +579,11 @@
       margin-bottom: $space-normal;
     }
   }
+
+  .resource {
+    &:hover {
+      background-color: $color-brighter-forest-green;
+      text-decoration: none;
+    }
+  }
 }
