@@ -28,5 +28,5 @@ $faqs                = Certificates_ACF::get_faqs_by_titles( $featured_faq_title
 	  </li>
 	<?php endforeach; ?>
   </ul>
-  <a href="<?php echo get_page_link( 32 ); ?>" class="button register small">See All FAQs</a>
+  <a href="<?php echo get_page_link( 32 ); ?>" class="button register normal">See All FAQs</a>
 </div>
