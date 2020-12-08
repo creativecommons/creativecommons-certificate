@@ -23,7 +23,7 @@
 	include get_template_part( 'inc/partials/home', 'hero' );
 	?>
 
-  <section class="has-background-grey-lighter padding-top-big padding-bottom-xl">
+  <section class="has-background-grey-lighter padding-top-bigger padding-bottom-xl">
 	<div class="container">
 
 	  <div class="columns is-variable is-6 padding-bottom-large">
