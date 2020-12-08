@@ -14,7 +14,7 @@ $faqs                = Certificates_ACF::get_faqs_by_titles( $featured_faq_title
 	  <li class="accordion-item">
 		<button class="accordion-header padding-top-big padding-bottom-big" id="<?php echo 'accordion-' . $faq['question']; ?>" aria-expanded="false" aria-controls="<?php echo 'section-' . $faq['question']; ?>">
 		  <span class="has-color-dark-slate-gray has-text-left body-big">
-			<?php echo $faq['question']; ?>
+				<?php echo $faq['question']; ?>
 		  </span>
 		  <span class="margin-left-small icon has-text-black">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -256 1792 1792" class="caret">

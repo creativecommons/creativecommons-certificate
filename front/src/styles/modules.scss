@@ -255,6 +255,12 @@
 
   // FAQ Page
   &.page-template-template-faq {
+    .faq-title a {
+      color: inherit;
+      appearance: none;
+      text-decoration: none;
+    }
+
     .faq-sidebar {
       position: sticky;
       top: $space-normal;
