@@ -262,12 +262,13 @@
     }
 
     .faq-sidebar {
+      font-weight: bold;
       position: sticky;
       top: $space-normal;
     }
 
     .faq-sidebar .active {
-      font-weight: bold;
+      color: $color-dark-slate-gray;
     }
   }
 
