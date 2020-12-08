@@ -230,3 +230,7 @@ a[href="#"] {
   pointer-events: none;
   cursor: default;
 }
+
+.button.middle {
+  padding: $space-normal $space-large;
+}

@@ -66,7 +66,7 @@
 								</div>
 							<?php } ?>
 
-						 <a href="<?php echo $registration_link; ?>" class="button register margin-top-bigger">Register Here</a>
+						 <a href="<?php echo $registration_link; ?>" class="button register middle margin-top-bigger">Register Here</a>
 					<?php else : ?>
 						<p class="margin-bottom-bigger">There are no upcoming events for this course. Subscribe to our newsletter to stay updated on course announcements.</p>
 					<?php endif; ?>
