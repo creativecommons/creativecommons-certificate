@@ -198,6 +198,7 @@
       @include mobile() {
         .course {
           margin-bottom: $space-normal;
+          font-size: 0.8rem;
         }
       }
 
