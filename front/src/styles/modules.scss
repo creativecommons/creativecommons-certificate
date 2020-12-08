@@ -10,10 +10,30 @@
       color: $color-white;
     }
   }
+
   .image {
     padding-bottom: $space-normal;
     margin-bottom: $space-normal;
     border-bottom: 1px solid $color-white;
+  }
+}
+
+.image .attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: $color-black;
+  color: $color-white;
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: $space-small $space-normal;
+
+  a {
+    text-decoration: underline;
+    color: inherit;
   }
 }
 
