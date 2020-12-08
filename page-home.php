@@ -99,9 +99,9 @@
 					<?php echo $post->title->rendered; ?>
 				  </a>
 				</h4>
-				<p class="caption margin-top-normal">
+				<p class="small-caption margin-top-normal">
 				  <span><?php echo $post->author_name; ?></span>
-				  <svg class="margin-horizontal-smaller" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+				  <svg class="margin-horizontal-small" width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
 				  <circle opacity="0.2" cx="3" cy="3" r="3" fill="black" />
 				</svg>
 				<span><?php echo $pretty_date; ?></span>

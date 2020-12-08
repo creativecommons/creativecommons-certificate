@@ -563,6 +563,10 @@
       display: flex;
       flex-direction: column;
 
+      a:hover {
+        color: inherit;
+      }
+
       .has-background-soft-gold {
         flex-grow: 1;
         display: flex;
