@@ -31,8 +31,13 @@
 							<input type="text" class="input is-big" placeholder="Search any member">
 						</form>
 					</div>
-
-					<div>
+				</section>
+			</div>
+		</div>
+		<div class="columns">
+			<div class="column is-12">
+				<section class="entry-page-content">
+					<div class="alumni-members-wrapper">
 						<?php $alumni->render_alumni(); ?>
 					</div>
 				</section>

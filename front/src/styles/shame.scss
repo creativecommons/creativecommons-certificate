@@ -201,6 +201,14 @@ main {
     }
   }
 
+  .foot {
+    width: 100%;
+    column-span: 1 2;
+    display: block;
+    grid-column: span 2;
+    margin-top: $space-big;
+  }
+
   @include mobile() {
     display: flex;
     flex-direction: column;

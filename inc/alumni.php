@@ -28,15 +28,46 @@ class CC_Alumni {
 			self::$instance = new $c();
 		}
 		return self::$instance;
+  }
+
+  public static function get_latest_posts( $count = 3 ) {
+    $args = array(
+        'post_type'   => 'topic',
+        'numberposts' => $count,
+    );
+
+    return get_posts( $args );
+	}
+
+	public static function forum_card( $post_id ) {
+		$author_id = get_post_field( 'post_author', $post_id );
+		?>
+		<article class="fixed-card">
+			<header>
+				<a href="<?php echo get_the_permalink( $post_id ); ?>">
+					<h3 class="subtitle is-5"><?php echo get_the_title( $post_id ) ?></h3>
+				</a>
+			</header>
+			<footer class="foot">
+				<p class="caption has-text-weight-semibold">
+					Posted By
+					<a href="<?php echo bbp_get_user_profile_url( $author_id ); ?>">
+						<?php echo get_the_author_meta( 'display_name', $author_id ); ?>
+					</a>
+				</p>
+				<p class="caption has-text-grey has-text-weight-semibold"><?php echo get_the_date( 'm/d/yy', $post_id ); ?></p>
+			</footer>
+		</article>
+		<?php
 	}
 
 	public static function get_alumni() {
-		$key = 'cc_alumni';
+		$key = 'cc_alumni_';
 
 		if ( false === ( $results = get_transient( $key ) ) ) {
 			$results = get_users(
 				array(
-					'role__in' => array( 'bbp_participant' ),
+					'role__in' => array( 'bbp_participant', 'subscriber' ),
 					'fields'   => array(
 						'ID',
 						'user_email',
@@ -50,16 +81,17 @@ class CC_Alumni {
 		return $results;
 	}
 
-	public function render_alumni() {
+	public function render_alumni( $count = null ) {
+		$alumni = array_slice( $this->alumni, 0, $count );
 		?>
-	<div class="alumni-members">
-		<?php foreach ( $this->alumni as $single_alumni ) { ?>
-				<a href="<?php echo bbp_get_user_profile_url( $single_alumni->ID ); ?>" class="alumni-member">
-					<img class="margin-bottom-small" src="<?php echo get_avatar_url( $single_alumni->ID, array( 'size' => 120 ) ); ?>" alt="Kitten">
-					<span class="has-text-weight-bold"><?php echo $single_alumni->display_name; ?></span>
-				</a>
-	  <?php } ?>
-	</div>
+<div class="alumni-members">
+<?php foreach ($alumni as $single_alumni ) { ?>
+		<a href="<?php echo bbp_get_user_profile_url( $single_alumni->ID ); ?>" class="alumni-member">
+			<img class="margin-bottom-small" src="<?php echo get_avatar_url( $single_alumni->ID, array( 'size' => 120 ) ); ?>" alt="<?php echo $single_alumni->display_name; ?>" loading="lazy" width="120" height="120">
+			<span class="has-text-weight-bold"><?php echo $single_alumni->display_name; ?></span>
+		</a>
+<?php } ?>
+</div>
 		<?php
 	}
 

@@ -312,22 +312,29 @@
   // Alumni
   .alumni-header,
   .alumni-members {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 
-  .alumni-members-wrapper .alumni-member {
-    width: 120px;
-    flex-shrink: 0;
-    margin-left: $space-large / 2;
-    margin-right: $space-large / 2;
-
-    &:first-child {
-      margin-left: 0;
+  .alumni-members-wrapper--single-row {
+    .alumni-members {
+      flex-wrap: nowrap;
     }
-    &:last-child {
-      margin-right: 0;
+    .alumni-member {
+      row-gap: $space-large;
+    }
+  }
+
+  .alumni-members-wrapper {
+    .alumni-members {
+      gap: $space-large;
+    }
+
+    .alumni-member {
+      width: 120px;
     }
   }
 
@@ -338,11 +345,17 @@
     text-align: center;
     align-items: center;
     justify-content: center;
+    align-self: stretch;
 
     img {
       width: 100%;
       border-radius: 50%;
       border: 3px solid black;
+    }
+
+    span {
+      flex-grow: 1;
+      word-break: break-all; // break long user names.
     }
   }
 

@@ -2,8 +2,9 @@
   /*Template Name: Alumni Home Page */
 	get_header();
 	the_post();
-	$user_id          = 960;
-	$upcoming_courses = Certificates_Website::get_upcoming_course_events();
+
+	$upcoming_courses    = Certificates_Website::get_upcoming_course_events();
+	$forum_latest_posts  = CC_Alumni::get_latest_posts();
 ?>
 <section class="main-content has-background-grey-lighter">
 
@@ -29,8 +30,8 @@
 					See all <?php echo count( $alumni->alumni ); ?> Members
 				</a>
 			</div>
-			<div class="alumni-members-wrapper">
-				<?php $alumni->render_alumni(); ?>
+			<div class="alumni-members-wrapper alumni-members-wrapper--single-row">
+				<?php $alumni->render_alumni( 15 ); ?>
 			</div>
 		</div>
 	</section>
@@ -43,6 +44,13 @@
 				See all announcements
 			</a>
 		</div>
+		<ul>
+			<?php foreach ( $forum_latest_posts as $forum_post ) { ?>
+				<li>
+					<?php echo CC_Alumni::forum_card( $forum_post->ID ); ?>
+				</li>
+			<?php } ?>
+		</ul>
 	</div>
 	</section>
 
