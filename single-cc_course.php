@@ -33,7 +33,7 @@
 	<div class="container">
 		<div class="columns margin-top-0 is-desktop">
 		<div class="column is-3-desktop has-background-soft-gold course-sidebar is-full">
-					<div class="entry-meta margin-top-xxl">
+					<div class="entry-meta margin-top-xl">
 						<h2 class="title is-3 margin-bottom-bigger">Course details</h2>
 
 
