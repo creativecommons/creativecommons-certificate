@@ -56,5 +56,3 @@ Add the following to your `composer.json` file:
 1. Export local DB with url rename `wp search-replace 'certs-backup.test' 'tempcert.creativecommons.org' --export=certs.sql`
 2. Zip uploads directory `zip uploads.zip uploads -r`
 3. Upload `.zip` to production server
-
-Dild.38584.zouch.fluh.reesp.pruipt
