@@ -254,25 +254,13 @@ a[href="#"] {
   cursor: default;
 }
 
+// A bit ugly but necessary to give the correct effect on mobile
 @include desktop() {
-  // Fancy stuff to make alumni grid match mockup
   .alumni-member:nth-child(21),
   .alumni-member:nth-child(22),
   .alumni-member:nth-child(31),
   .alumni-member:nth-child(32) {
     opacity: 0;
     pointer-events: none;
-  }
-
-  .alumni-member:nth-child(32),
-  .alumni-member:nth-child(33),
-  .alumni-member:nth-child(34),
-  .alumni-member:nth-child(35),
-  .alumni-member:nth-child(36),
-  .alumni-member:nth-child(37),
-  .alumni-member:nth-child(38),
-  .alumni-member:nth-child(39),
-  .alumni-member:nth-child(40) {
-    // transform: translateX(8px);
   }
 }
