@@ -11,9 +11,12 @@
   }
 }
 
-a,
-a:hover {
+a {
   color: $color-forest-green;
+
+  &:hover {
+    color: $color-brighter-forest-green;
+  }
 }
 
 h1,
