@@ -186,6 +186,7 @@ main {
 
   .left {
     margin-right: $space-large;
+    line-height: calc(1.5rem + 4px);
 
     * {
       white-space: nowrap; // prevent month+date lines from wrapping
