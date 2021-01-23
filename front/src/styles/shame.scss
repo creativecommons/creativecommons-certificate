@@ -262,3 +262,10 @@ a[href="#"] {
 .small-caption {
   font-size: 11px;
 }
+
+
+@include desktop() {
+  .course {
+    padding: 56px 48px !important;
+  }
+}
