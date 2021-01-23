@@ -16,7 +16,6 @@ $color-success: #008000;
 @import "modules";
 @import "shame";
 
-a,
 .has-text-success,
 .has-text-forest-green {
   color: $color-forest-green !important; // !important to override bulma's use of important! :(

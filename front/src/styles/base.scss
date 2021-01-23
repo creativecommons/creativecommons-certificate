@@ -14,7 +14,8 @@
 a {
   color: $color-forest-green;
 
-  &:hover {
+  &:hover,&:active,&:visited {
+    text-decoration: none;
     color: $color-brighter-forest-green;
   }
 }
