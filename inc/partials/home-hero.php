@@ -13,7 +13,7 @@
 
 <section class="home-hero has-padding-large">
   <div class="container margin-bottom-bigger">
-	<div class="content padding-top-bigger padding-bottom-bigger body-big">
+	<div class="content padding-top-bigger padding-bottom-bigger body-bigger">
 	  <h1 class="title is-1 has-text-black"><?php echo $title; ?></h1>
 	  <?php echo $content; ?>
 	</div>
