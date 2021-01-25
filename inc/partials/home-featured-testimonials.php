@@ -49,9 +49,9 @@
 	  </button>
 
 	  <div class="glide__bullets" data-glide-el="controls[nav]">
-		<?php for ( $i = 0; $i < count( $testimonials ); $i++ ) { ?>
-		  <button class="glide__bullet" data-glide-dir="=<?php echo $i; ?>"></button>
-		<?php } ?>
+      <?php for ( $i = 0; $i < count( $testimonials ); $i++ ) { ?>
+        <button class="glide__bullet" data-glide-dir="=<?php echo $i; ?>"></button>
+      <?php } ?>
 	  </div>
 
 	  <button class="glide__arrow glide__arrow--right" data-glide-dir=">">

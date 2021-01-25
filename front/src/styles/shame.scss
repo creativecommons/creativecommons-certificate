@@ -23,6 +23,11 @@ span.icon {
 // Accordion component
 // @todo: Should this be in vocabulary? Do/will we use this anywhere else?
 .accordion {
+  @include touch() {
+    margin-top: $space-big !important;
+    margin-bottom: $space-big !important;
+  }
+
   .accordion-item {
     border-bottom: 2px solid $color-light-gray;
 
@@ -36,7 +41,27 @@ span.icon {
       justify-content: space-between;
       align-items: center;
 
+      @include touch() {
+        padding-top: $space-normal !important;
+        padding-bottom: $space-normal !important;
+        padding-left: 0;
+        padding-right: 0;
+
+        span {
+          font-size: 0.8rem;
+        }
+
+        .icon {
+          width: 15px;
+          flex-shrink: 0;
+        }
+      }
+
       &:focus {
+        outline: 0;
+      }
+      &:focus-visible { // when user focuses with keyboard only
+        outline: auto;
         outline-color: $color-forest-green;
       }
     }
@@ -48,14 +73,33 @@ span.icon {
     .accordion-body[hidden] {
       visibility: hidden;
     }
+
+    .caret {
+      flex-shrink: 0;
+      flex-grow: 0;
+      width: 24px;
+    }
+
+    [aria-expanded="true"] .caret {
+      transform: rotate(180deg);
+      transform-origin: center;
+    }
+
+    [aria-expanded="true"] {
+      font-weight: 600;
+    }
   }
 }
 
 // Override HR color on grey bg
 .has-background-grey-lighter {
   hr {
-    margin: $space-bigger 0;
     background-color: $color-light-gray;
+    margin: $space-big 0;
+
+    @include desktop() {
+      margin: $space-bigger 0;
+    }
   }
 }
 
@@ -190,6 +234,7 @@ main {
 
   .left {
     margin-right: $space-large;
+    line-height: calc(1.5rem + 4px);
 
     * {
       white-space: nowrap; // prevent month+date lines from wrapping
@@ -263,4 +308,28 @@ a[href="#"] {
     opacity: 0;
     pointer-events: none;
   }
+}
+
+
+.button.middle {
+  padding: $space-normal $space-large;
+}
+
+.button.normal {
+  padding: $space-small $space-normal;
+}
+
+.small-caption {
+  font-size: 11px;
+}
+
+@include desktop() {
+  .course {
+    padding: 56px 48px !important;
+  }
+}
+
+
+.navbar-start {
+    padding-top: 8px;
 }

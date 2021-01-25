@@ -1,62 +1,43 @@
 {
-    "key": "group_5fc84e23acb06",
-    "title": "Course Information",
+    "active": true,
+    "description": "",
     "fields": [
         {
-            "key": "field_5fc84e4b1b93a",
-            "label": "Year",
-            "name": "year",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
             "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
             "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
-        },
-        {
-            "key": "field_5fc84e521b93b",
-            "label": "Course",
-            "name": "course",
-            "type": "text",
+            "delay": 0,
             "instructions": "",
+            "key": "field_5fcf412a55067",
+            "label": "Featured Image Attribution",
+            "media_upload": 1,
+            "name": "featured_image_attribution",
             "required": 0,
-            "conditional_logic": 0,
+            "tabs": "all",
+            "toolbar": "full",
+            "type": "wysiwyg",
             "wrapper": {
-                "width": "",
                 "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "",
-            "maxlength": ""
+                "id": "",
+                "width": ""
+            }
         }
     ],
+    "hide_on_screen": "",
+    "instruction_placement": "label",
+    "key": "group_5fc84e23acb06",
+    "label_placement": "top",
     "location": [
         [
             {
-                "param": "user_role",
                 "operator": "==",
-                "value": "all"
+                "param": "post_type",
+                "value": "cc_course"
             }
         ]
     ],
     "menu_order": 0,
+    "modified": 1607418232,
     "position": "normal",
     "style": "default",
-    "label_placement": "top",
-    "instruction_placement": "label",
-    "hide_on_screen": "",
-    "active": true,
-    "description": "",
-    "modified": 1607407191
+    "title": "Course Information"
 }

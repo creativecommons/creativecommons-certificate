@@ -10,10 +10,38 @@
       color: $color-white;
     }
   }
+
   .image {
     padding-bottom: $space-normal;
     margin-bottom: $space-normal;
     border-bottom: 1px solid $color-white;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  background-color: $color-black;
+  color: $color-white;
+  display: block;
+  width: 100%;
+  font-size: 0.8rem;
+  padding: $space-small $space-normal;
+
+  a {
+    text-decoration: underline;
+    color: inherit;
+  }
+
+  &--right {
+    right: 0;
+    left: auto;
+    margin-left: auto;
+    width: auto;
+    bottom: -40px;
   }
 }
 
@@ -112,7 +140,7 @@
       background-color: black;
       padding: $space-small $space-normal;
       display: inline-block;
-      color: $color-dark-gray;
+      color: white;
 
       a {
         color: white;
@@ -198,6 +226,7 @@
       @include mobile() {
         .course {
           margin-bottom: $space-normal;
+          font-size: 0.8rem;
         }
       }
 
@@ -234,13 +263,20 @@
 
   // FAQ Page
   &.page-template-template-faq {
+    .faq-title a {
+      color: inherit;
+      appearance: none;
+      text-decoration: none;
+    }
+
     .faq-sidebar {
+      font-weight: bold;
       position: sticky;
       top: $space-normal;
     }
 
     .faq-sidebar .active {
-      font-weight: bold;
+      color: $color-dark-slate-gray;
     }
   }
 
@@ -486,6 +522,7 @@
 
     .title {
       margin: 0;
+      line-height: 1.4;
       flex-grow: 1;
     }
 
@@ -639,6 +676,10 @@
       display: flex;
       flex-direction: column;
 
+      a:hover {
+        color: inherit;
+      }
+
       .has-background-soft-gold {
         flex-grow: 1;
         display: flex;
@@ -661,6 +702,13 @@
 
     li {
       margin-bottom: $space-normal;
+    }
+  }
+
+  .resource {
+    &:hover {
+      background-color: $color-brighter-forest-green;
+      text-decoration: none;
     }
   }
 }
