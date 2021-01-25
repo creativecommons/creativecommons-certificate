@@ -76,6 +76,23 @@ span.icon {
   padding: $space-small $space-normal;
   color: $color-forest-green;
   background-color: #e0f5e0;
+
+  // dropown variation
+  &.is-dropdown {
+    color: $color-dark-gray;
+    background-color: transparent;
+    border: 2px solid #d8d8d8;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    .caret-down {
+      width: 8px;
+      height: 19px;
+      margin-left: 12px !important;
+      color: black;
+    }
+  }
 }
 
 // Custom Register Button
@@ -83,6 +100,15 @@ span.icon {
   color: $color-white;
   background-color: $color-forest-green;
   border-color: $color-forest-green;
+}
+
+// Custom Slack Button
+.button.slack {
+  padding: $space-normal $space-big;
+  background-color: $color-white;
+  border-color: $color-light-gray;
+  color: $color-dark-slate-gray;
+  text-transform: none;
 }
 
 // Remove unneeded logo margin (comes from vocabulary)
@@ -115,6 +141,9 @@ main {
   background-color: #fef6d8;
 }
 
+.main-content {
+  min-height: 70vh;
+}
 .single,
 .page {
   .main-content {
@@ -172,6 +201,14 @@ main {
     }
   }
 
+  .foot {
+    width: 100%;
+    column-span: 1 2;
+    display: block;
+    grid-column: span 2;
+    margin-top: $space-big;
+  }
+
   @include mobile() {
     display: flex;
     flex-direction: column;
@@ -190,11 +227,22 @@ main {
     }
   }
 }
+
 .fixed-card.fixed-card--simple {
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.fixed-card--stacked {
+  display: flex;
+  flex-direction: column;
+
+  .foot {
+    margin-top: $space-large;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .subtitle {
@@ -204,4 +252,15 @@ main {
 a[href="#"] {
   pointer-events: none;
   cursor: default;
+}
+
+// A bit ugly but necessary to give the correct effect on mobile
+@include desktop() {
+  .alumni-member:nth-child(21),
+  .alumni-member:nth-child(22),
+  .alumni-member:nth-child(31),
+  .alumni-member:nth-child(32) {
+    opacity: 0;
+    pointer-events: none;
+  }
 }

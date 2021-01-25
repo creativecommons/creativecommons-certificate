@@ -309,6 +309,118 @@
     }
   }
 
+  // Alumni
+  .alumni-header,
+  .alumni-members {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    word-wrap: break-word;
+
+    &.is-editing {
+      align-items: flex-start;
+    }
+  }
+
+  .alumni-header .profile-pic {
+    flex-shrink: 0;
+    margin-right: $space-larger;
+
+    img {
+      border-radius: 50%;
+      border: 2px solid black;
+    }
+  }
+
+  .alumni-header #bbpress-forums #bbp-user-body {
+    margin-left: 0;
+    width: 100%;
+
+    h2 {
+      margin-top: $space-bigger;
+      font-size: 1.4em !important;
+    }
+  }
+
+  .alumni-header .right {
+    overflow-x: hidden;
+  }
+
+  .alumni-header--single-user .right {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  .alumni-members-wrapper--single-row {
+    .alumni-members {
+      flex-wrap: nowrap !important;
+      row-gap: $space-large;
+    }
+  }
+
+  .alumni-members-wrapper {
+    .alumni-members {
+      flex-wrap: wrap;
+      gap: $space-large;
+    }
+
+    .alumni-member {
+      flex-shrink: 0;
+      width: 120px;
+    }
+  }
+
+  .alumni-members-wrapper--fancy {
+    .alumni-members {
+      max-width: 680px;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: $space-small;
+    }
+
+    .alumni-member {
+      flex-shrink: 0;
+      width: 60px;
+
+      span {
+        display: none;
+      }
+    }
+  }
+
+  .alumni-member {
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+
+    img {
+      width: 100%;
+      border-radius: 50%;
+      border: 3px solid black;
+    }
+
+    span {
+      flex-grow: 1;
+      word-break: break-all; // break long user names.
+    }
+  }
+
+  .forum-posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $space-larger;
+
+    li {
+      flex: 1;
+    }
+  }
+
   // Course template
   &.single-cc_course {
     .course-meta {
@@ -466,6 +578,7 @@
       row-gap: $space-normal;
 
       @include tablet() {
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         margin-top: $space-big;
