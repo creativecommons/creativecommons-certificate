@@ -300,13 +300,15 @@ a[href="#"] {
 }
 
 // A bit ugly but necessary to give the correct effect on mobile
-@include desktop() {
-  .alumni-member:nth-child(21),
-  .alumni-member:nth-child(22),
-  .alumni-member:nth-child(31),
-  .alumni-member:nth-child(32) {
-    opacity: 0;
-    pointer-events: none;
+@media screen and (min-width: 1312px) {
+  .alumni-members-wrapper--fancy {
+    .alumni-member:nth-child(21),
+    .alumni-member:nth-child(22),
+    .alumni-member:nth-child(31),
+    .alumni-member:nth-child(32) {
+      opacity: 0;
+      pointer-events: none;
+    }
   }
 }
 
