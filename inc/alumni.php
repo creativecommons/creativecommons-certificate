@@ -86,7 +86,7 @@ class CC_Alumni {
 		?>
 <div class="alumni-members">
 <?php foreach ($alumni as $single_alumni ) { ?>
-		<a href="<?php echo bbp_get_user_profile_url( $single_alumni->ID ); ?>" class="alumni-member">
+		<a href="<?php echo bbp_get_user_profile_url( $single_alumni->ID ); ?>" class="alumni-member" data-alumni-name="<?php echo strtolower($single_alumni->display_name); ?>">
 			<img class="margin-bottom-small" src="<?php echo get_avatar_url( $single_alumni->ID, array( 'size' => 120 ) ); ?>" alt="<?php echo $single_alumni->display_name; ?>" loading="lazy" width="120" height="120">
 			<span class="has-text-weight-bold"><?php echo $single_alumni->display_name; ?></span>
 		</a>

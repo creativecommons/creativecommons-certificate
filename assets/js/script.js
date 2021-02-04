@@ -7,12 +7,37 @@ function togggleHiddenAttr(el, attr) {
   return true;
 }
 
+
 jQuery(document).ready(function ($) {
+  /**
+   * Simple front-end search of alumni by name
+   * See `template-alumni-members.php` for reference
+   **/
+  function alumniSearch(term) {
+    const $allAlumni = $('[data-alumni-name]')
+
+    if (term === '') {
+      $allAlumni.show()
+      return
+    }
+
+    const $alumniMatches = $('[data-alumni-name*="' + term.toLowerCase()  +'"]')
+    if ($alumniMatches.length > 0) {
+      $allAlumni.hide()
+      $alumniMatches.show()
+    }
+  }
+
   // Homepage slider
   var sliderClass = ".testimonials-slider";
   if ($(sliderClass).length > 0) {
     new Glide(sliderClass).mount();
   }
+
+  $("#alumni-member-search").on("keyup", function (event) {
+    console.log('alumni search!')
+    alumniSearch(event.currentTarget.value)
+  })
 
   // Accordions
   // accordionHeader.click(() => accordionBody where labelledby = accordionHeader.id remove hide)
