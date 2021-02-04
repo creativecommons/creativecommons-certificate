@@ -2,6 +2,8 @@
   /*Template Name: Alumni Forum */
 	get_header();
 	the_post();
+
+	$forum_id = get_field('alumni_forum', 'options');
 ?>
 <section class="main-content">
 
@@ -19,7 +21,11 @@
 					<div class="text-format content body-bigger margin-bottom-xl margin-top-big">
 						<?php the_content(); ?>
 					</div>
-					<a class="button is-success" href="<?php echo bbp_forum_topics_link(); ?>">Submit a Post</a>
+
+					<a id="forum-topic-form-button" class="button is-success" href="<?php echo bbp_forum_topics_link(); ?>">Submit a Post</a>
+					<div id="forum-topic-form">
+						<?php echo do_shortcode("[bbp-topic-form forum_id=$forum_id]") ?>
+					</div>
 				</div>
 
 				<div class="alumni-members-wrapper alumni-members-wrapper--fancy">
@@ -32,10 +38,10 @@
 
 	<div class="container">
 		<div class="columns">
-			<div class="column is-6">
+			<div class="column is-8">
 				<section class="entry-page-content padding-top-xl">
 					<div class="text-format content body-big">
-						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate, repellendus. Adipisci ex sed magnam maiores consectetur officia quis recusandae enim.
+						<?php echo do_shortcode("[bbp-single-forum id=$forum_id]") ?>
 					</div>
 				</section>
 			</div>

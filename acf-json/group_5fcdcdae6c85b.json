@@ -1,6 +1,6 @@
 {
     "key": "group_5fcdcdae6c85b",
-    "title": "Alumni Pages",
+    "title": "Alumni Settings",
     "fields": [
         {
             "key": "field_5fcdcdb3342c3",
@@ -85,7 +85,7 @@
         },
         {
             "key": "field_5fcdf22240823",
-            "label": "Forum",
+            "label": "Forum Page",
             "name": "alumni_forum_page",
             "type": "post_object",
             "instructions": "",
@@ -103,6 +103,28 @@
             "allow_null": 0,
             "multiple": 0,
             "return_format": "object",
+            "ui": 1
+        },
+        {
+            "key": "field_601c7c830aea1",
+            "label": "Forum",
+            "name": "alumni_forum",
+            "type": "post_object",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "forum"
+            ],
+            "taxonomy": "",
+            "allow_null": 0,
+            "multiple": 0,
+            "return_format": "id",
             "ui": 1
         }
     ],
@@ -123,5 +145,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1607403401
+    "modified": 1612479659
 }

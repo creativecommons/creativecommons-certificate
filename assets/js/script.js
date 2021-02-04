@@ -29,6 +29,18 @@ jQuery(document).ready(function ($) {
     return $alumniMatches.length
   }
 
+  // Toggle alumni form to add post
+  const $alumniTopicFormButton = $('#forum-topic-form-button')
+  const $alumniTopicForm = $('#forum-topic-form')
+
+  $alumniTopicForm.hide()
+  $alumniTopicFormButton.click(function (event) {
+    event.preventDefault()
+    $alumniTopicFormButton.hide()
+    $alumniTopicForm.show()
+  })
+
+
   // Homepage slider
   var sliderClass = ".testimonials-slider";
   if ($(sliderClass).length > 0) {

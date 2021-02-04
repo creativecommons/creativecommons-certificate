@@ -264,3 +264,9 @@ a[href="#"] {
     pointer-events: none;
   }
 }
+
+
+// To fix button height issues
+.button {
+    height: auto;
+}
