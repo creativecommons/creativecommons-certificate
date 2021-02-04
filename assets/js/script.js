@@ -18,7 +18,6 @@ jQuery(document).ready(function ($) {
 
     if (term === '') {
       $allAlumni.show()
-      return
     }
 
     const $alumniMatches = $('[data-alumni-name*="' + term.toLowerCase()  +'"]')
@@ -26,6 +25,8 @@ jQuery(document).ready(function ($) {
       $allAlumni.hide()
       $alumniMatches.show()
     }
+
+    return $alumniMatches.length
   }
 
   // Homepage slider
@@ -35,8 +36,15 @@ jQuery(document).ready(function ($) {
   }
 
   $("#alumni-member-search").on("keyup", function (event) {
-    console.log('alumni search!')
-    alumniSearch(event.currentTarget.value)
+    const result = alumniSearch(event.currentTarget.value)
+    const errorMsg = $("#alumni-search-no-results")
+    if (result === 0 && errorMsg.length > 0) {
+
+    } else if (result === 0 && errorMsg.length === 0) {
+      $(`<p id="alumni-search-no-results">No results for your search.</p>`).insertAfter($(this))
+    } else {
+      errorMsg.remove()
+    }
   })
 
   // Accordions
