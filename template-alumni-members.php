@@ -28,7 +28,7 @@
 						<?php the_content(); ?>
 
 						<form action="">
-							<input type="text" class="input is-big" placeholder="Search any member">
+							<input id="alumni-member-search" type="text" class="input is-big" placeholder="Search any member">
 						</form>
 					</div>
 				</section>
