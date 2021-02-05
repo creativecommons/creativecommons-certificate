@@ -61,6 +61,9 @@
 		</div>
 		<div>
 		<ul class="alumni-header">
+			<?php if ( count( $upcoming_courses ) === 0 ) : ?>
+				<p>There are no upcoming courses at this time.</p>
+			<?php endif; ?>
 			<?php foreach ( $upcoming_courses as $course ) : ?>
 				<li>
 					<?php echo Certificates_Website::event_card( $course->ID ); ?>

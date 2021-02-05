@@ -334,3 +334,8 @@ a[href="#"] {
 .navbar-start {
     padding-top: 8px !important;
 }
+
+// To fix button height issues
+.button {
+    height: auto;
+}
