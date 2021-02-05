@@ -44,7 +44,7 @@ jQuery(document).ready(function ($) {
   // Homepage slider
   var sliderClass = ".testimonials-slider";
   if ($(sliderClass).length > 0) {
-    new Glide(sliderClass).mount();
+    new Glide(sliderClass, { autoplay: 5000 }).mount();
   }
 
   $("#alumni-member-search").on("keyup", function (event) {
