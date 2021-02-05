@@ -2,14 +2,7 @@
 // Code here should be commented with a relevant issue or explanation.
 @import "bulma/sass/utilities/_all.sass";
 
-// Make sure page is always at least as tall as the user's screen (so don't see ugly whitespace below footer on short pages)
-// will fail gracefully on browsers without grid support :)
-// .creativecommons-certificate {
-//   min-height: 100vh;
-//   display: grid;
-//   grid-template-rows: auto 1fr auto;
-// }
-
+// Fix icon sizing inside of buttons, menu links, etc.
 span.icon {
   display: block;
   width: $space-big;
@@ -91,7 +84,7 @@ span.icon {
   }
 }
 
-// Override HR color on grey bg
+// Extra color classes
 .has-background-grey-lighter {
   hr {
     background-color: $color-light-gray;
@@ -102,6 +95,11 @@ span.icon {
     }
   }
 }
+
+.has-background-soft-gold {
+  background-color: #fef6d8;
+}
+
 
 // Custom twitter button
 .button.twitter {
@@ -155,11 +153,6 @@ span.icon {
   text-transform: none;
 }
 
-// Remove unneeded logo margin (comes from vocabulary)
-.navbar-brand {
-  margin-left: 0 !important;
-}
-
 // Fix bad columns ruining the entire layout
 main {
   max-width: 100%;
@@ -179,10 +172,6 @@ main {
     padding-left: $space-normal;
     padding-right: $space-normal;
   }
-}
-
-.has-background-soft-gold {
-  background-color: #fef6d8;
 }
 
 .main-content {
@@ -312,15 +301,6 @@ a[href="#"] {
   }
 }
 
-
-.button.middle {
-  padding: $space-normal $space-large;
-}
-
-.button.normal {
-  padding: $space-small $space-normal;
-}
-
 .small-caption {
   font-size: 11px;
 }
@@ -331,11 +311,35 @@ a[href="#"] {
   }
 }
 
+// Navbar revisions
 .navbar-start {
     padding-top: 8px !important;
+}
+@include desktop() {
+  .navbar-brand {
+      padding-left: 0 !important;
+  }
 }
 
 // To fix button height issues
 .button {
     height: auto;
+}
+
+/**
+ * BbPress Overrides
+ * Styles to override various parts of BB Press,
+ * to make them look as much like Francisco's designs as possible.
+ */
+@include desktop() {
+  #bbpress-forums ul.bbp-topics {
+    font-size: 16px;
+  }
+
+  a.bbp-topic-permalink {
+    font-size: 27px;
+    line-height: 39px;
+    font-weight: bold;
+    color: initial;
+  }
 }

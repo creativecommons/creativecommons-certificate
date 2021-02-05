@@ -38,7 +38,7 @@
 
 	<div class="container">
 		<div class="columns">
-			<div class="column is-8">
+			<div class="column is-12">
 				<section class="entry-page-content padding-top-xl">
 					<div class="text-format content body-big">
 						<?php echo do_shortcode("[bbp-single-forum id=$forum_id]") ?>
