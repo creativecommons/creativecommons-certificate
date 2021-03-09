@@ -156,6 +156,6 @@ class Certificates_ACF {
 }
 
 add_action( 'acf/init', array( 'Certificates_ACF', 'init' ) );
-add_filter( 'acf/load_field/name=blog_posts', array( 'Certificates_ACF', 'acf_load_blog_posts' ) );
+add_filter( 'acf/load_field/name=post_id', array( 'Certificates_ACF', 'acf_load_blog_posts' ) );
 add_filter( 'acf/load_field/name=featured_faqs', array( 'Certificates_ACF', 'acf_load_featured_faq_choices' ) );
 add_filter( 'acf/load_field/name=featured_testimonials', array( 'Certificates_ACF', 'acf_load_featured_testimonials' ) );
