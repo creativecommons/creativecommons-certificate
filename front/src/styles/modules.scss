@@ -228,6 +228,12 @@
           margin-bottom: $space-normal;
           font-size: 0.8rem;
         }
+
+        @include desktop() {
+          .course {
+            flex: 1;
+          }
+        }
       }
 
       @include tablet() {

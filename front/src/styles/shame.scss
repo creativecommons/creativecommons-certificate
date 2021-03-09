@@ -343,3 +343,17 @@ a[href="#"] {
     color: initial;
   }
 }
+
+
+.course-sidebar + .column .fixed-card {
+  margin-bottom: 1rem;
+}
+
+.creativecommons-certificate .breadcrumbs .breadcrumb_last {
+  color: #9c9c9c;
+}
+
+.single.single-cc_course .main-content .entry-page-content {
+    padding-top: 0;
+    padding-bottom: 3rem;
+}
