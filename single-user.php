@@ -22,15 +22,15 @@
 					<?php if ( !$editing ) { ?>
 					<ul class="body-big margin-top-large">
 						<li class="margin-bottom-small"><strong>Email:</strong> <?php echo bbp_get_displayed_user_field( 'user_email' ); ?></li>
-						<li class="margin-bottom-small"><strong>Course:</strong> <?php get_field( 'course' ); ?></li>
-						<li class="margin-bottom-small"><strong>Year:</strong> <?php get_field( 'year' ); ?></li>
+						<li class="margin-bottom-small"><strong>Course:</strong> <?php echo bbp_get_displayed_user_field( 'course' ); ?></li>
+						<li class="margin-bottom-small"><strong>Year:</strong> <?php  echo bbp_get_displayed_user_field( 'year' ); ?></li>
 					</ul>
 					<?php } ?>
 
 					<div id="bbpress-forums" class="bbpress-wrapper">
 						<div id="bbp-user-wrapper">
 							<div id="bbp-user-body">
-								<?php if ( $editing ) bbp_get_template_part( 'form', 'user-edit'       ); ?>
+								<?php if ( $editing ) bbp_get_template_part( 'form', 'user-edit' ); ?>
 							</div>
 						</div>
 					</div>

@@ -62,12 +62,12 @@ class CC_Alumni {
 	}
 
 	public static function get_alumni() {
-		$key = 'cc_alumni';
+		$key = 'cc_alumni_users';
 
 		if ( false === ( $results = get_transient( $key ) ) ) {
 			$results = get_users(
 				array(
-					'role__in' => array( 'bbp_participant', 'subscriber' ),
+					'role__in' => array( 'bbp_participant' ),
 					'fields'   => array(
 						'ID',
 						'user_email',
