@@ -372,3 +372,33 @@ a[href="#"] {
 .page-template-template-alumni-home ul.alumni-header li {
 	margin-bottom: 1rem;
 }
+
+
+// Header compatibility issues
+@include tablet() {
+  .home-hero {
+    margin-top: 2rem;
+  }
+}
+
+@include desktop() {
+  header.main-header {
+    max-width: 1430px;
+    margin: 0 auto;
+  }
+}
+
+.navbar-burger:hover {
+  background-color: transparent;
+}
+
+@include mobile() {
+  .navbar.is-default .navbar-menu .navbar-end .navbar-dropdown .navbar-item,
+  .navbar.is-default .navbar-menu .navbar-end .navbar-item {
+    color: white !important;
+  }
+
+  .is-arrowless .icon.caret-down {
+    display: none;
+  }
+}
