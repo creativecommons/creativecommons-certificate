@@ -357,7 +357,7 @@
     width: 100%;
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     word-wrap: break-word;
 
@@ -365,6 +365,11 @@
       align-items: flex-start;
     }
   }
+
+  .alumni-header {
+    justify-content: space-between;
+  }
+
 
   .alumni-header .profile-pic {
     flex-shrink: 0;
@@ -449,7 +454,7 @@
 
     span {
       flex-grow: 1;
-      word-break: break-all; // break long user names.
+      line-height: 1;
     }
   }
 

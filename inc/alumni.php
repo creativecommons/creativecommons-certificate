@@ -62,7 +62,7 @@ class CC_Alumni {
 	}
 
 	public static function get_alumni() {
-		$key = 'cc_alumni_users';
+		$key = 'cc_alumni_forum_members';
 
 		if ( false === ( $results = get_transient( $key ) ) ) {
 			$results = get_users(
@@ -72,6 +72,8 @@ class CC_Alumni {
 						'ID',
 						'user_email',
 						'display_name',
+						'first_name',
+						'last_name'
 					),
 				)
 			);
@@ -88,7 +90,7 @@ class CC_Alumni {
 <?php foreach ($alumni as $single_alumni ) { ?>
 		<a href="<?php echo bbp_get_user_profile_url( $single_alumni->ID ); ?>" class="alumni-member" data-alumni-name="<?php echo strtolower($single_alumni->display_name); ?>">
 			<img class="margin-bottom-small" src="<?php echo get_avatar_url( $single_alumni->ID, array( 'size' => 120 ) ); ?>" alt="<?php echo $single_alumni->display_name; ?>" loading="lazy" width="120" height="120">
-			<span class="has-text-weight-bold"><?php echo $single_alumni->display_name; ?></span>
+			<span class="has-text-weight-bold"><?php echo get_user_meta( $single_alumni->ID, 'first_name' )[0]; ?> <?php echo get_user_meta( $single_alumni->ID, 'last_name' )[0]; ?></span>
 		</a>
 <?php } ?>
 </div>
