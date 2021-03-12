@@ -126,6 +126,25 @@
             "multiple": 0,
             "return_format": "id",
             "ui": 1
+        },
+        {
+            "key": "field_604bde2d46a43",
+            "label": "Manual Member Count",
+            "name": "member_count_override",
+            "type": "text",
+            "instructions": "Manually override the count of users on the alumni pages. If not provided, will fallback to the number of users on the site.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
         }
     ],
     "location": [
@@ -145,5 +164,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1612479659
+    "modified": 1615584862
 }

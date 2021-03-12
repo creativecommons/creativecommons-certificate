@@ -62,7 +62,7 @@ class CC_Alumni {
 	}
 
 	public static function get_alumni() {
-		$key = 'cc_alumni_forum_members';
+		$key = 'cc_alumni_members';
 
 		if ( false === ( $results = get_transient( $key ) ) ) {
 			$results = get_users(
@@ -72,8 +72,6 @@ class CC_Alumni {
 						'ID',
 						'user_email',
 						'display_name',
-						'first_name',
-						'last_name'
 					),
 				)
 			);
