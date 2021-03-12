@@ -50,7 +50,7 @@
 		  <div class="columns is-vcentered is-gapless">
 			<?php if ( get_field('featured_upcoming_event') ) : ?>
 			<div class="column">
-			  <h3>Upcoming Course</h3>
+			  <h3>Upcoming Courses</h3>
 			</div>
 			<div class="column is-narrow">
 			  <?php // @todo: Don't hardcode this link ?>
@@ -58,8 +58,15 @@
 			</div>
 		  </div>
 		  <div>
-				<?php echo Certificates_Website::event_card( get_field('featured_upcoming_event') ); ?>
-		  </div>
+				<?php
+					$upcoming_courses  = Certificates_Website::get_upcoming_course_events( null, 2 );
+				?>
+				<?php foreach ( $upcoming_courses as $course ) : ?>
+				<div style="margin-bottom: 20px;">
+					<?php echo Certificates_Website::event_card( $course->ID ); ?>
+				</div>
+				<?php endforeach; ?>
+			</div>
 		</div>
 		<?php endif; ?>
 	  </div>

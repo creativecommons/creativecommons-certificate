@@ -349,7 +349,7 @@ a[href="#"] {
   margin-bottom: 1rem;
 }
 
-.creativecommons-certificate .breadcrumbs .breadcrumb_last {
+.single-cc_course .breadcrumbs .breadcrumb_last {
   color: #9c9c9c;
 }
 
@@ -376,8 +376,8 @@ a[href="#"] {
 
 // Header compatibility issues
 @include tablet() {
-  .home-hero {
-    margin-top: 2rem;
+  header.main-header {
+    margin-bottom: 2rem !important;
   }
 }
 

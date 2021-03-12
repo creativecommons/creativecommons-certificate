@@ -47,7 +47,7 @@ class Certificates_Website {
 	public static function modify_breadcrumb_seperator() {
 		return '<i class="icon chevron-right is-6"></i>';
 	}
-	public static function get_upcoming_course_events( $post_id = null ) {
+	public static function get_upcoming_course_events( $post_id = null, $limit = null ) {
 		$meta_query = array(
 			array(
 				'key'     => 'start_date',
@@ -56,7 +56,7 @@ class Certificates_Website {
 			),
 		);
 
-		// Filter by course ff we're getting events related to a specific course.
+		// Filter by course if we're getting events related to a specific course.
 		if ( $post_id ) {
 			$meta_query[] = array(
 				'key'     => 'related_course',
@@ -65,16 +65,18 @@ class Certificates_Website {
 			);
 		}
 
-		$posts = get_posts(
-			array(
-				'posts_per_page' => -1,
-				'post_type'      => 'cc_events',
-				'meta_key'       => 'start_date',
-				'orderby'        => 'meta_value_num',
-				'order'          => 'ASC',
-				'meta_query'     => $meta_query,
-			)
+		$meta = array(
+			'posts_per_page' => -1,
+			'post_type'      => 'cc_events',
+			'meta_key'       => 'start_date',
+			'orderby'        => 'meta_value_num',
+			'order'          => 'ASC',
+			'meta_query'     => $meta_query,
 		);
+
+		if ($limit) { $meta['posts_per_page'] = $limit; }
+
+		$posts = get_posts(	$meta );
 
 		return $posts;
 	}
